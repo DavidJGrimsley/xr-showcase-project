@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "workspaceId": "xr-showcase",
+  "name": "xr-showcase",
+  "repositories": [
+    {
+      "id": "source",
+      "remote": "REQUIRED",
+      "defaultBranch": "main",
+      "mainFolder": "xr-showcase-main",
+      "worktreePrefix": "xr-showcase-"
+    }
+  ],
+  "project": {
+    "path": "project"
+  },
+  "temp": {
+    "path": "temp"
+  }
+}
