@@ -1,0 +1,19 @@
+{
+  "buildId": "02d480be-4fe7-468c-8be2-539da629e826",
+  "status": "FINISHED",
+  "platform": "IOS",
+  "distribution": "INTERNAL",
+  "buildProfile": "development",
+  "gitCommitHash": "839c8e3dcf21d1668a6fb795217f1557363c0bd2",
+  "createdAt": "2026-10-11T01:28:50.316Z",
+  "completedAt": "2026-10-11T01:34:30.124Z",
+  "sdkVersion": "57.0.0",
+  "appVersion": "1.0.0",
+  "appBuildVersion": "1",
+  "isForIosSimulator": false,
+  "retrievedAtUtc": "2026-10-12T18:43:19.632Z",
+  "originalPodLogExcerptRetrieved": true,
+  "ownerIdentifiedCommitPrefix": "839c8e3",
+  "directlyInterrogatedPhoneBinary": false,
+  "limitation": "Owner identification plus build metadata/pod logs is historical runtime evidence, not direct proof of which binary currently runs on the phone."
+}

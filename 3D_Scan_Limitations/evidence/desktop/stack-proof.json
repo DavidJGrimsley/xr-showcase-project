@@ -1,0 +1,20 @@
+{
+  "nativeDrawingVerified": false,
+  "results": [
+    {
+      "preset": "mri-grayscale",
+      "transparentPixels": 73022,
+      "scanPixels": 29378
+    },
+    {
+      "preset": "ct-bone",
+      "transparentPixels": 82974,
+      "scanPixels": 19426
+    },
+    {
+      "preset": "ct-soft-tissue",
+      "transparentPixels": 73986,
+      "scanPixels": 28414
+    }
+  ]
+}

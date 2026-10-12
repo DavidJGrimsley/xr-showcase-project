@@ -1,0 +1,293 @@
+Fresh checkout at e1a0042aba53959018f7cba78e85d9dc41affc63; npm ci completed successfully.
+Node 24.16.0; npm 10.9.8; isolated Playwright 1.64.0; Chrome 154.0.8037.99.
+
+node --experimental-strip-types --test tests/medical-controller.test.cjs tests/medical-assets.test.cjs tests/medical-slices.test.cjs tests/medical-volumes.test.cjs tests/medical-ui.test.cjs
+(node:35000) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<APP_CHECKOUT>/src/features/ar/ar-transform.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\<APP_CHECKOUT>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ packaged skull meets triangle/size budgets and matches its provenance hash (2.4814ms)
+✔ geometry has valid indices, finite positions and normalized normals (45.3905ms)
+✔ skull is centred, grounded, opaque and exported without additional resources (1.1342ms)
+✔ four named labels are calibrated on the actual exported surface (273.5975ms)
+✔ cleaning retains separate anatomical components while dropping subresolution debris and degenerate faces (7.7944ms)
+✔ four picker modes retain full Skull and separately expose Half Skull (0.2185ms)
+✔ packaged brain validates geometry, resource budgets, source identity and attribution (36.6868ms)
+✔ packaged half-skull validates geometry, resource budgets, source identity and attribution (39.8559ms)
+✔ the pair preserves one Slicer conversion frame, retains physical bounds and stays within its combined budget (0.2339ms)
+✔ Both scene loads two separately keyed objects under one placement and gesture transform (186.486ms)
+✔ scene deadline fails only unfinished slots; Retry remounts both and old events remain stale (94.7615ms)
+✔ only the full Skull scene exposes its calibrated labels and teardown clears the deadline (160.4979ms)
+✔ slice scene mounts one image, shares the plane, changes only its key and ignores stale native events (47.3521ms)
+✔ slice scene handles failed load events, deadline, retry and teardown (73.8586ms)
+✔ volume probes gate one proxy box, alpha textures and bounded material cleanup (79.7506ms)
+✔ volume scene deadlines, retry keys, unsupported bridge and old probe events are scoped (75.7284ms)
+✔ a rejected shader update becomes a recoverable volume error (66.5349ms)
+✔ default stacked volume needs no custom uniform API, corrects iOS alpha and never mounts a cube (108.5989ms)
+✔ magenta debug registers a texture-free fragment shader and cancels a queued mount on teardown (20.792ms)
+(node:62508) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<APP_CHECKOUT>/src/features/medical-viewer/medical-models.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\<APP_CHECKOUT>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ falls back to Skull when default Both is missing; unavailable modes cannot be selected (2.0832ms)
+✔ defaults to Both and all four modes can be selected without placement; same mode does not reload (0.84ms)
+✔ changing modes preserves placement and pose, clears gestures and invalidates older callbacks (0.5826ms)
+✔ Half Skull is a single-asset mode and switching to Both rejects its earlier load and errors (0.2752ms)
+✔ fresh default Both waits for both loads and returns as default after Home teardown (0.1937ms)
+✔ Both requires two distinct load completions in either order and blocks partial readiness (0.4355ms)
+✔ Either Both asset can fail, Retry reloads the pair and ignores callbacks from the failed attempt (0.4693ms)
+✔ failure before either completion remains an error and switching mode recovers in place (0.1419ms)
+✔ Both shares one pose, repositions together, and retains mode across restart and resume (0.5352ms)
+✔ requires normal tracking, selected plane and finished loading (0.1519ms)
+✔ transform sliders use absolute values, clamp size and height, and wrap yaw (0.1667ms)
+✔ pinch uses the start baseline, including the final factor and subsequent gestures (0.164ms)
+✔ rotation is cumulative within a gesture and wraps across full turns (0.0877ms)
+✔ invalid and out-of-order gestures do not alter the model (0.087ms)
+✔ Reposition preserves pose and labels, invalidating previous placement callbacks (0.0825ms)
+✔ removing an unrelated plane is harmless; selected-plane loss allows reselecting (0.0756ms)
+✔ retry keeps placement and ignores success from a failed or older load (0.1038ms)
+✔ tracking loss interrupts gestures and blocks manipulation until normal tracking (0.1114ms)
+✔ background/resume retains preferences, clears placement and ignores stale callbacks (0.1229ms)
+✔ Restart AR resets pose and placement while retaining labels; returning later has fresh defaults (0.3026ms)
+✔ malformed gesture ends release their baselines and controls (0.0936ms)
+✔ a model error interrupts active gestures and Retry restores usable transform controls (0.1007ms)
+✔ height stays independent of pinch size and yaw, including placement loss (0.0776ms)
+✔ sliders and consecutive native gestures share pose without baseline jumps (0.0691ms)
+✔ transform callbacks ignore earlier load attempts, placements and sessions after teardown (0.1354ms)
+✔ anatomy XYZ position is bounded, independent of size/yaw, and preserved through reposition but reset by Restart AR (0.1564ms)
+✔ subscription emits changed snapshots and unsubscribes cleanly (0.0732ms)
+(node:64316) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<APP_CHECKOUT>/src/features/medical-viewer/medical-models.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\<APP_CHECKOUT>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ slice XYZ offsets retain their own pose, reject stale/loading callbacks, and reset with the panel (1.3757ms)
+✔ real export contains two complete series at identical axial positions (0.534ms)
+✔ malformed metadata fails recoverably, including counts, dimensions, traversal and coordinates (1.7493ms)
+✔ default Anatomy/Both and middle MRI become slices in the same placement (0.1851ms)
+✔ slice indices clamp and round; nonfinite, same selection and wrong session do nothing (0.2275ms)
+✔ modality switches map physical positions even when counts and spacing differ (0.1725ms)
+✔ rapid changes and retry reject success/error from earlier image requests (0.2934ms)
+✔ switching representations invalidates anatomy and slice loads without losing poses (0.2894ms)
+✔ panel gestures, tracking loss and resets remain bounded and independent (0.2346ms)
+✔ placement changes, restart and teardown invalidate old callbacks and keep valid selections (0.3264ms)
+✔ missing datasets and modalities are recoverable and retain anatomy (0.1683ms)
+✔ slider scheduler delivers the latest action once per frame and cancels on exit (0.2494ms)
+(node:59776) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<APP_CHECKOUT>/src/features/medical-viewer/medical-models.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\<APP_CHECKOUT>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ dense transforms retain all three sliders and completion actions, including large-text layouts (59.0091ms)
+✔ the shared transform editor opens XYZ Position, returns to transforms, and preserves completion/reposition callbacks (38.5564ms)
+✔ Robots, Qubit and all three medical modes wire XYZ Position to the same editor and their live scoped controllers (99.7509ms)
+✔ medical actions use app colors, retain labels/state and fit narrow widths at large text sizes (39.6689ms)
+✔ medical sheet bounds scrolling separately from the pinned Done header through resize and large text (48.3203ms)
+✔ medical HUD retains mode, transform and retry actions without duplicate Home through mode changes (74.8249ms)
+✔ slice controls retain coalesced slider input, limits, modality and reset callbacks (6.5627ms)
+✔ volume sheet preserves crop/appearance controls, diagnostics gates and closing clears pending slider updates (13.5873ms)
+✔ universal model picker retains all four available models and selection callbacks (2.8804ms)
+✔ unavailable anatomy models retain disabled native entries and are excluded from the web menu (6.7489ms)
+(node:3536) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<APP_CHECKOUT>/src/features/medical-viewer/medical-models.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\<APP_CHECKOUT>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ volume XYZ position preserves scientific crop/appearance and pose through surface changes; stale callbacks cannot move it (1.4385ms)
+✔ real volume assets retain source identity, scalar precision, geometry, and bounded atlas sizes (13.5454ms)
+✔ malformed volume metadata fails recoverably before native binding (0.6078ms)
+✔ anatomy Both stays the opening default; 3D Scan starts with the full MRI at visible opacity (0.1871ms)
+✔ all three atlas successes precede binding; failures, deadlines, retry, and stale events stay scoped (0.2656ms)
+✔ CT MRI round trips preserve physical crop and transforms with independent appearance settings (0.3637ms)
+✔ all six crop boundaries clamp to physical bounds and a one-voxel separation (0.1867ms)
+✔ appearance bounds, preset isolation, transparency, quality and crop reset have defined defaults (0.3184ms)
+✔ mode switches isolate all transforms and reject callbacks from an earlier representation (0.1946ms)
+✔ controls sheet, tracking and lifecycle prevent gestures and invalidate pending requests (0.3213ms)
+✔ missing and unsupported renderers preserve other modes (0.2614ms)
+✔ malformed gesture endings retain the other gesture; renderer failure releases both (0.1437ms)
+✔ frame scheduling retains independent controls, coalesces repeats, and cancels on exit (0.3167ms)
+✔ proxy box preserves anatomical proportions and the correct 55cm extent (0.202ms)
+✔ stacked fallback has true transparent air, bounded opacity, real scan hashes and ordered planes (135.2309ms)
+✔ stack cropping preserves RAS UV orientation, physical proportions and camera-dependent depth order (0.6645ms)
+✔ stack failures, presets, resets and old callbacks remain scoped and window/level stays baked (0.3701ms)
+✔ shader diagnostics cannot test atlases before human magenta confirmation and invalidate confirmations on placement (0.3603ms)
+ℹ tests 86
+ℹ suites 0
+ℹ pass 86
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1662.7313
+
+Exit: 0
+
+node --experimental-strip-types tools/medical/test_volume_shader.cjs
+{
+  "compiled": true,
+  "renderer": "WebKit WebGL",
+  "maxTexture": 8192,
+  "nativeConstantTemplate": true,
+  "transformError": 7.152557373046875e-7,
+  "checks": [
+    {
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sampled": 0,
+      "expected": 0,
+      "error": 0
+    },
+    {
+      "point": [
+        1,
+        1,
+        1
+      ],
+      "sampled": 65535,
+      "expected": 65535,
+      "error": 0
+    },
+    {
+      "point": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "sampled": 32767.5,
+      "expected": 32767.5,
+      "error": 0
+    },
+    {
+      "point": [
+        0.23,
+        0.61,
+        0.77
+      ],
+      "sampled": 50295.51171875,
+      "expected": 50295.51,
+      "error": 0.0017187499979627319
+    },
+    {
+      "point": [
+        0.16666666666666666,
+        0.25,
+        0.3333333333333333
+      ],
+      "sampled": 21759,
+      "expected": 21759,
+      "error": 0
+    }
+  ],
+  "fullAlpha": 2479.218971426133,
+  "croppedAlpha": 1239.6561137582175,
+  "transparentAlpha": 0,
+  "cameraChanges": true,
+  "fastAlpha": 1679.5971450088546,
+  "maxQualityAlphaError": 0.000016994774341583252,
+  "cpuOpacityError": 0.000017400983505111434,
+  "glError": 0,
+  "iosBindingContract": {
+    "viroVersion": "3.0.3",
+    "boxBinding": "shaderOverrides",
+    "explicitSamplerCopy": true,
+    "authoredRenderProperties": true,
+    "nativeExecutionVerified": false
+  }
+}
+{
+  "realAssets": [
+    {
+      "modality": "mri",
+      "maxSamplingError": 0.001423547515514656
+    },
+    {
+      "modality": "ct",
+      "maxSamplingError": 0.000385906431802141
+    }
+  ]
+}
+{
+  "diagnostics": [
+    {
+      "modality": "mri",
+      "compiledModes": [
+        "magenta",
+        "high",
+        "low",
+        "validity",
+        "coordinates",
+        "uniforms",
+        "ray",
+        "opacity",
+        "raymarch"
+      ],
+      "alphaErrors": {
+        "high": 0,
+        "low": 0,
+        "validity": 0
+      }
+    },
+    {
+      "modality": "ct",
+      "compiledModes": [
+        "magenta",
+        "high",
+        "low",
+        "validity",
+        "coordinates",
+        "uniforms",
+        "ray",
+        "opacity",
+        "raymarch"
+      ],
+      "alphaErrors": {
+        "high": 0.000007152557373046875,
+        "low": 0.00003063678741455078,
+        "validity": 0
+      }
+    }
+  ]
+}
+{
+  "stackColor": {
+    "nativeDrawingVerified": false,
+    "checkedProbes": 48,
+    "brightTissueBefore": [
+      10,
+      10,
+      10,
+      45
+    ],
+    "brightTissueCorrected": [
+      255,
+      255,
+      255,
+      45
+    ]
+  }
+}
+{
+  "stackedSlices": [
+    {
+      "preset": "mri-grayscale",
+      "transparentPixels": 73022,
+      "scanPixels": 29378
+    },
+    {
+      "preset": "ct-bone",
+      "transparentPixels": 82974,
+      "scanPixels": 19426
+    },
+    {
+      "preset": "ct-soft-tissue",
+      "transparentPixels": 73986,
+      "scanPixels": 28414
+    }
+  ]
+}
+(node:21352) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<APP_CHECKOUT>/src/features/medical-viewer/medical-models.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\<APP_CHECKOUT>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+Exit: 0

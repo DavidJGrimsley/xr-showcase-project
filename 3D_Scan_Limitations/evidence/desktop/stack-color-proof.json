@@ -1,0 +1,16 @@
+{
+  "nativeDrawingVerified": false,
+  "checkedProbes": 48,
+  "brightTissueBefore": [
+    10,
+    10,
+    10,
+    45
+  ],
+  "brightTissueCorrected": [
+    255,
+    255,
+    255,
+    45
+  ]
+}
