@@ -1,0 +1,4 @@
+# Preserve archived evidence and recorded hashes across operating systems.
+* -text
+# Native sources are unchanged evidence, including upstream whitespace.
+native/** -whitespace

@@ -1,0 +1,74 @@
+{
+  "compiled": true,
+  "renderer": "WebKit WebGL",
+  "maxTexture": 8192,
+  "nativeConstantTemplate": true,
+  "transformError": 7.152557373046875e-7,
+  "checks": [
+    {
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sampled": 0,
+      "expected": 0,
+      "error": 0
+    },
+    {
+      "point": [
+        1,
+        1,
+        1
+      ],
+      "sampled": 65535,
+      "expected": 65535,
+      "error": 0
+    },
+    {
+      "point": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "sampled": 32767.5,
+      "expected": 32767.5,
+      "error": 0
+    },
+    {
+      "point": [
+        0.23,
+        0.61,
+        0.77
+      ],
+      "sampled": 50295.51171875,
+      "expected": 50295.51,
+      "error": 0.0017187499979627319
+    },
+    {
+      "point": [
+        0.16666666666666666,
+        0.25,
+        0.3333333333333333
+      ],
+      "sampled": 21759,
+      "expected": 21759,
+      "error": 0
+    }
+  ],
+  "fullAlpha": 2479.218971426133,
+  "croppedAlpha": 1239.6561137582175,
+  "transparentAlpha": 0,
+  "cameraChanges": true,
+  "fastAlpha": 1679.5971450088546,
+  "maxQualityAlphaError": 0.000016994774341583252,
+  "cpuOpacityError": 0.000017400983505111434,
+  "glError": 0,
+  "iosBindingContract": {
+    "viroVersion": "3.0.3",
+    "boxBinding": "shaderOverrides",
+    "explicitSamplerCopy": true,
+    "authoredRenderProperties": true,
+    "nativeExecutionVerified": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "xr-scan-investigation-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Additional desktop shader-harness dependency; the app remains unchanged.",
+  "dependencies": {
+    "playwright-core": "1.64.0"
+  }
+}

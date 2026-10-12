@@ -1,0 +1,2894 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-10-12",
+  "timezone": "America/New_York",
+  "app": {
+    "repository": "https://github.com/DavidJGrimsley/xr-showcase",
+    "commit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+    "originalFeatureCommit": "e798b54268739c5292d02561eff96b3afbac706a",
+    "visibilityAndDiagnosticsCommit": "5ad11b4b5651f366b97fe0a7e3e30bced3027cf0",
+    "sharedMainAtInspection": "58bd10d219b2dd0dbe81f178e8879e12e153fb07",
+    "trackedStateClean": true
+  },
+  "packageRepository": {
+    "repository": "https://github.com/DavidJGrimsley/xr-showcase-project",
+    "branch": "docs/3d-scan-limitations",
+    "manifestSelfHashExcluded": true
+  },
+  "environment": {
+    "node": "v24.16.0",
+    "npm": "10.9.8",
+    "playwrightCore": "1.64.0",
+    "chrome": "154.0.8037.99",
+    "platform": "win32",
+    "architecture": "x64",
+    "gpuHarness": "Chromium headless WebGL2 with ANGLE SwiftShader; installed iOS Constant GLSL template",
+    "nativeDrawingVerified": false,
+    "reproductionVerifiedAtUtc": "2026-10-12T18:58:51.400Z",
+    "freshCheckout": {
+      "npmCiSucceeded": true,
+      "medicalTestsPassed": 86,
+      "shaderHarnessPassed": true,
+      "supplementalDependencySetupVerified": true,
+      "playwrightDependency": "Provided transitively by react-doctor in the pinned app lockfile; optional isolated repro install pins the same version.",
+      "nativeDeviceTest": false
+    }
+  },
+  "dependencies": {
+    "@reactvision/react-viro": {
+      "version": "3.0.3",
+      "npmIntegrity": "sha512-OzIjwUtYL6lAH/NReahm4yyoWc6vMpipXYsDdYAnoE1C73iOL4rD8a/u9uypp/W8XS8gW1ts05ddeD0z2auREg=="
+    },
+    "expo": {
+      "version": "57.0.27",
+      "npmIntegrity": "sha512-Jc3nByHsmzjakvIrqV3/3viVj+jFw1OCfMc+WpClemwL3/hSrS7ktkVCACSTI7/j+1uH+eHmBJwe1kujDLMnbQ=="
+    },
+    "react-native": {
+      "version": "0.86.3",
+      "npmIntegrity": "sha512-JR5s3bM9ezud+Mw24GlNXNfthqPIKwrQgPPJcam+L97t2sKjjEavhCzBn+fyqZZRcM5+XlhYxpTxVkK7e1n38Q=="
+    },
+    "playwright-core": {
+      "version": "1.64.0",
+      "npmIntegrity": "sha512-T9r+MZkTECl2+oUcZ26YgZzTrYidTsIhYYkJix+6iDOymOb1FB2RLLSOxRGnZGv5DStt+aduIVbt+E8WygXYpg==",
+      "providedByAppLockfile": true,
+      "transitiveParent": "react-doctor",
+      "isolatedReproInstallIncluded": true
+    }
+  },
+  "viro": {
+    "rendererCommit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+    "installedArm64BinarySha256": "dfd54f391a941c584e1c23e4c40af4a05ebb46ef43d2ea70c8a1db594294169b",
+    "installedArm64BinaryBytes": 21858328,
+    "binaryIncluded": false,
+    "binaryRetrieval": "npm ci at the pinned app commit retrieves the exact package identified by lockfile integrity."
+  },
+  "sourceScene": {
+    "filename": "2026-10-08-Scene.mrb",
+    "bytes": 1323777421,
+    "sha256": "998783662535ddd9619709cfce38b262da9bd3ca4ff588ad80f37b228d96d598",
+    "included": false,
+    "slicerVersion": "5.12.4",
+    "collection": "NLM Visible Human Project — Additional Head Images",
+    "sourceUrl": "https://data.lhncbc.nlm.nih.gov/public/Visible-Human/Additional-Head-Images/MR_CT_DICOM/",
+    "attribution": "Courtesy of the U.S. National Library of Medicine; Brigham and Women's Hospital / Harvard Medical School, Peter Ratiu and colleagues.",
+    "sourceNodesUnchanged": true
+  },
+  "unknownDeviceEvidence": {
+    "iphoneModel": null,
+    "iosVersion": null,
+    "directlyVerifiedNativeVersion": null,
+    "sustainedFps": null,
+    "repeatedSwitchMemory": null,
+    "latestSheetPhysicalAcceptance": null,
+    "remainingWhiteCubeRootCause": null
+  },
+  "data": {
+    "originalDimensions": [
+      {
+        "modality": "mri",
+        "dimensions": [
+          512,
+          512,
+          463
+        ],
+        "spacingMm": [
+          0.48906199999999994,
+          0.48906199999999994,
+          0.5032467532467527
+        ],
+        "scalarRange": [
+          -446.873261867035,
+          8875.406321267688
+        ],
+        "quantizationMaxError": 0.07112429952030652
+      },
+      {
+        "modality": "ct",
+        "dimensions": [
+          512,
+          512,
+          463
+        ],
+        "spacingMm": [
+          0.48906199999999994,
+          0.48906199999999994,
+          0.5032467532467527
+        ],
+        "scalarRange": [
+          -1200,
+          2119.803414741027
+        ],
+        "quantizationMaxError": 0.025328474036541593
+      }
+    ],
+    "grid": {
+      "boundsRasMm": [
+        -124.95521545410156,
+        125.44452667236328,
+        -196.61221313476562,
+        53.78752899169922,
+        -230.75161743164062,
+        2.3248720948801065
+      ],
+      "dimensions": [
+        160,
+        160,
+        149
+      ],
+      "spacingMm": 1.5748411454494644,
+      "sampleOrder": "Array Z,Y,X = increasing S,A,R; PNG rows retain array Y order",
+      "rasToViro": "X=R, Y=S, Z=-A; centred at common-grid midpoint"
+    },
+    "atlas": {
+      "dimensions": [
+        2106,
+        1944
+      ],
+      "columns": 13,
+      "tileDimensions": [
+        162,
+        162
+      ],
+      "gutter": 1,
+      "encoding": "16-bit unsigned scalar, high and low bytes in separate PNG alpha channels; validity in third alpha channel",
+      "texture": "RGBA8, LINEAR filtering, no mipmaps, clamp; alpha is linear even in sRGB textures"
+    },
+    "atlasPngBytes": 11822292,
+    "currentDefaultsAuthority": "Pinned medical-volumes.ts and medical-controller.ts; volume metadata defaults describe the original half-head revision.",
+    "stackMetadataSourceHash": "4957690ad1d0c0294793d78cb7da4b5e054564b9722f596f0f0297abeb6c07aa"
+  },
+  "technicalCoverage": [
+    {
+      "topic": "Status and fallback caption",
+      "destination": "README.md#medical-3d-scan-iphone-failure-and-investigation-kit",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-controls.native.tsx"
+      ],
+      "evidence": [
+        "evidence/device/IMG_3685.png",
+        "evidence/device/IMG_3686.png"
+      ]
+    },
+    {
+      "topic": "Original plan, source names, preserved scene and transforms",
+      "destination": "README.md#data-and-intended-rendering",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/export_volume_slicer.py",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/volume_export_core.py"
+      ],
+      "evidence": [
+        "evidence/data/volumes-metadata.json"
+      ]
+    },
+    {
+      "topic": "Source dimensions/spacing, export grid and sample reduction",
+      "destination": "README.md#data-and-intended-rendering",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/data/volumes-metadata.json"
+      ]
+    },
+    {
+      "topic": "Scene bytes/SHA-256, full dataset attribution and original-node preservation",
+      "destination": "MANIFEST.json#sourceScene",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/data/volumes-metadata.json"
+      ]
+    },
+    {
+      "topic": "Matrices, acquisition/registration fingerprints, scalar ranges/offsets/scales and quantization",
+      "destination": "README.md#data-and-intended-rendering",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/data/volumes-metadata.json"
+      ]
+    },
+    {
+      "topic": "16-bit alpha encoding, RGBA8/sRGB, validity interpolation, gutters, tile order and no mipmaps",
+      "destination": "README.md#data-and-intended-rendering",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-shader.ts"
+      ],
+      "evidence": [
+        "evidence/data/volumes-metadata.json"
+      ]
+    },
+    {
+      "topic": "Proxy, coordinate mapping, camera/model, placement, quality, lighting, crop faces and compositing",
+      "destination": "README.md#data-and-intended-rendering",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-shader.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-uniforms.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volumes.ts"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "Intentional half-head versus full current bounds/reset behavior",
+      "destination": "README.md#data-and-intended-rendering",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volumes.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-controller.ts"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "Failed physical trials, highp operand correction and installed-template harness",
+      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/viro_shader_harness.cjs",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_volume_shader.cjs"
+      ],
+      "evidence": [
+        "evidence/device/IMG_3669.png",
+        "evidence/device/IMG_3670.png",
+        "evidence/device/IMG_3676.png",
+        "evidence/device/IMG_3677.png"
+      ]
+    },
+    {
+      "topic": "Material custom texture-copy omission, override property/uniform support and still-failed trial",
+      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume.native.tsx",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/viro_shader_harness.cjs"
+      ],
+      "evidence": [
+        "native/react-viro-3.0.3/ios/ViroReact/Views/VRTNode.mm",
+        "native/virocore/ViroRenderer/VROMaterial.cpp",
+        "evidence/device/IMG_3682.png"
+      ]
+    },
+    {
+      "topic": "ViroKit arm64 binary exact hash and npm integrity",
+      "destination": "MANIFEST.json#viro",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/package-lock.json"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "EAS build/commit/time/pod version and limits of owner runtime identification",
+      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/eas.json"
+      ],
+      "evidence": [
+        "evidence/build/build-metadata.json",
+        "evidence/build/viro-pod-install-excerpt.jsonl"
+      ]
+    },
+    {
+      "topic": "No native config/dependency changes or new EAS build for the historical fixes",
+      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-3d-scan.md",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-white-cube.md",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "Nine isolated diagnostic modes, human magenta gate and confirmation invalidation",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-diagnostics.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-controller.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-controls.native.tsx"
+      ],
+      "evidence": [
+        "evidence/desktop/diagnostics-proof.json"
+      ]
+    },
+    {
+      "topic": "Real atlas probe IJK/UV, bytes/scalars, invalid bands and each expected diagnostic color",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/data/stack-metadata.json",
+        "evidence/desktop/diagnostics-proof.json"
+      ]
+    },
+    {
+      "topic": "Native material queue, two-frame delay, absent acknowledgement, readiness versus drawing",
+      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume.native.tsx",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-stack.native.tsx"
+      ],
+      "evidence": [
+        "native/react-viro-3.0.3/ios/ViroReact/Modules/VRTMaterialManager.mm"
+      ]
+    },
+    {
+      "topic": "Supported errors/deadline, session/placement/request scopes, coalescing and exit cancellation",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-controller.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volumes.ts"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "NSLog compile/link diagnostics, missing device logs and registry lookup limitation",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [],
+      "evidence": [
+        "native/virocore/ViroRenderer/VROShaderProgram.cpp",
+        "native/virocore/ViroRenderer/VROLog.h"
+      ]
+    },
+    {
+      "topic": "Unconfirmed saturation/binding/compiler/uniform/race hypotheses and evidence boundaries",
+      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/desktop/shader-proof.json"
+      ]
+    },
+    {
+      "topic": "Fallback uses existing scalar atlases, 3 presets/144 planes/48 count and spacing",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/generate_volume_fallback.py"
+      ],
+      "evidence": [
+        "evidence/data/stack-metadata.json"
+      ]
+    },
+    {
+      "topic": "Quad flat UV contract, R/A crops, S exclusions, depth order and thin empty crops",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-stack.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-stack.native.tsx"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "Old/current baked-alpha formulas, node opacity, transparency and effective alpha",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/generate_volume_fallback.py",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volumes.ts"
+      ],
+      "evidence": [
+        "evidence/data/stack-metadata.json"
+      ]
+    },
+    {
+      "topic": "Premultiplied sRGB/double-alpha defect, iOS correction, platform gating and evidence limit",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-stack-color.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_stack_color.cjs"
+      ],
+      "evidence": [
+        "native/virocore/ios/ViroKit/VROImageiOS.cpp",
+        "native/virocore/ViroRenderer/VRODriverOpenGL.h",
+        "evidence/desktop/stack-color-proof.json"
+      ]
+    },
+    {
+      "topic": "Historical shader-free fallback versus current diffuse modifier/no atlas uniforms",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-white-cube.md",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "Preserved modality/crops/presets/AR ownership/independent transforms and baked appearance limits",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-controller.ts",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-controls.native.tsx"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "Discrete layer resolution, edge-on visibility, no crop caps and unimplemented alternatives",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-stack.ts"
+      ],
+      "evidence": [
+        "evidence/desktop/mri-grayscale-stack.png"
+      ]
+    },
+    {
+      "topic": "Compressed and decoded sizes, bounded names, native cache persistence versus eviction",
+      "destination": "README.md#workaround-and-constraints",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/data/stack-metadata.json",
+        "native/react-viro-3.0.3/ios/ViroReact/Modules/VRTMaterialManager.mm"
+      ]
+    },
+    {
+      "topic": "Raw-text Done exception and initial sheet layout repair; subsequent committed UI state",
+      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-universal-ui.md"
+      ],
+      "evidence": [
+        "evidence/device/codex-clipboard-c08c5117-ca70-4cb6-89b6-a3c01acddd63.png",
+        "evidence/device/IMG_3687.png"
+      ]
+    },
+    {
+      "topic": "Historical source/export/189/195/73/GPU/Doctor/bundle/whitespace checks versus fresh 86 tests",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-3d-scan.md",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-white-cube.md",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md"
+      ],
+      "evidence": [
+        "evidence/desktop/test-medical.log"
+      ]
+    },
+    {
+      "topic": "Exact synthetic/full-range/transform/quality/closed-form and real MRI/CT sampling errors",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/desktop/shader-proof.json",
+        "evidence/desktop/real-shader-proof.json"
+      ]
+    },
+    {
+      "topic": "48-probe correction RGB 10-to-255 / unchanged alpha 45 and zero-alpha/node opacity",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_stack_color.cjs"
+      ],
+      "evidence": [
+        "evidence/desktop/stack-color-proof.json"
+      ]
+    },
+    {
+      "topic": "Proof/previews archived instead of relying on ignored caches; unavailable historical references",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [],
+      "evidence": [
+        "evidence/desktop/stack-proof.json"
+      ]
+    },
+    {
+      "topic": "Portable dependencies, browser settings, fresh-checkout installation and shader reproduction",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/package.json",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/package-lock.json"
+      ],
+      "evidence": [
+        "repro/package-lock.json",
+        "evidence/desktop/fresh-checkout-reproduction.log"
+      ]
+    },
+    {
+      "topic": "Slicer/source-scene regeneration prerequisites and 48-plane hash/readiness constraint",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/README.md",
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/generate_volume_fallback.py"
+      ],
+      "evidence": []
+    },
+    {
+      "topic": "Matching client full restart, Metro port/log distinction, own-client build only when needed",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [
+        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/eas.json"
+      ],
+      "evidence": [
+        "evidence/build/build-metadata.json"
+      ]
+    },
+    {
+      "topic": "Device identity/first failure capture, each acceptance scenario and native log collection",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [],
+      "evidence": []
+    },
+    {
+      "topic": "Unverified physical drawing/UI/FPS/memory; 30 FPS/60-second and 1/10/30 switches targets",
+      "destination": "README.md#results-and-reproduction",
+      "sourceFiles": [],
+      "evidence": []
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".gitattributes",
+      "bytes": 177,
+      "sha256": "ed42dc840dbb82df5b936f21fd04eab965f54c2ea8fcee6baa5dda88fbbcf3a4",
+      "provenance": {
+        "category": "authored-handoff",
+        "recordedDate": "2026-10-12"
+      }
+    },
+    {
+      "path": "evidence/build/build-metadata.json",
+      "bytes": 763,
+      "sha256": "8b033d53a892f4ece791220e0778265f4e3deb834f160e6b4b8849cf12687a8b",
+      "provenance": {
+        "category": "retrieved-historical-build-metadata",
+        "buildId": "02d480be-4fe7-468c-8be2-539da629e826"
+      }
+    },
+    {
+      "path": "evidence/build/viro-pod-install-excerpt.jsonl",
+      "bytes": 254,
+      "sha256": "21757c1ee9c6d933ed4a93a9c2af1809e8ccc0aea6a035261298a99647faaf14",
+      "provenance": {
+        "category": "retrieved-historical-build-log",
+        "buildId": "02d480be-4fe7-468c-8be2-539da629e826",
+        "retrievedAtUtc": "2026-10-12T18:43:19.629Z",
+        "extraction": "Original log records containing Installing ViroReact (3.0.3); no reconstructed lines or signed log URLs included."
+      }
+    },
+    {
+      "path": "evidence/data/stack-metadata.json",
+      "bytes": 37585,
+      "sha256": "4957690ad1d0c0294793d78cb7da4b5e054564b9722f596f0f0297abeb6c07aa",
+      "provenance": {
+        "category": "pinned-export-metadata",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "sourceUrl": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/metadata.json",
+        "originalSha256": "4957690ad1d0c0294793d78cb7da4b5e054564b9722f596f0f0297abeb6c07aa",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/data/volumes-metadata.json",
+      "bytes": 6604,
+      "sha256": "4dc4bfdecd55d3da776ae5cab1e42c4ec5a512bf5017ca643dcfeafbc675ed39",
+      "provenance": {
+        "category": "pinned-export-metadata",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "sourceUrl": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/metadata.json",
+        "originalSha256": "4dc4bfdecd55d3da776ae5cab1e42c4ec5a512bf5017ca643dcfeafbc675ed39",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/ct-bone-shader.png",
+      "bytes": 97105,
+      "sha256": "8e1f5d2317e913ce40b49a008adeb80872ce2e2e4a93cf08869531ef1eb3d32c",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "8e1f5d2317e913ce40b49a008adeb80872ce2e2e4a93cf08869531ef1eb3d32c",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/ct-bone-stack.png",
+      "bytes": 65499,
+      "sha256": "6690582811c58686384786890783d953fc576d50cc47801d01a5c3873e3f0555",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "6690582811c58686384786890783d953fc576d50cc47801d01a5c3873e3f0555",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/ct-soft-tissue-shader.png",
+      "bytes": 119801,
+      "sha256": "f9364e5eb47fd4786405067794354344c088bf3743238cabf1070905d3b6fa35",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "f9364e5eb47fd4786405067794354344c088bf3743238cabf1070905d3b6fa35",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/ct-soft-tissue-stack.png",
+      "bytes": 82735,
+      "sha256": "292d0bd0feaaa9dbd991d938b01be98f4d1c0ec0aaded9f5b4ecc772be348b55",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "292d0bd0feaaa9dbd991d938b01be98f4d1c0ec0aaded9f5b4ecc772be348b55",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/diagnostics-proof.json",
+      "bytes": 10129,
+      "sha256": "7ca852d8224689c5636a923199ad88d26749f1b743d78b4c4a60ab81d11dedd0",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "7ca852d8224689c5636a923199ad88d26749f1b743d78b4c4a60ab81d11dedd0",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/fresh-checkout-reproduction.log",
+      "bytes": 14760,
+      "sha256": "4b347b0b97de68ada327b882b00523f0c6b97177984134a47adf8a05c4c9200c",
+      "provenance": {
+        "category": "fresh-install-reproduction-output",
+        "recordedDate": "2026-10-12"
+      }
+    },
+    {
+      "path": "evidence/desktop/mri-grayscale-shader.png",
+      "bytes": 112553,
+      "sha256": "3e3fdc6962e39a0e026a95f049dce57048f195ae6656df3fc5ae900695664797",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "3e3fdc6962e39a0e026a95f049dce57048f195ae6656df3fc5ae900695664797",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/mri-grayscale-stack.png",
+      "bytes": 79847,
+      "sha256": "0540e39503da379c84d16ca037bd8dcd2a509ea8b7ed6f0b5cc7a6b0a987086e",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "0540e39503da379c84d16ca037bd8dcd2a509ea8b7ed6f0b5cc7a6b0a987086e",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/real-shader-proof.json",
+      "bytes": 2228,
+      "sha256": "daaf8597e5cf0e1ddfb4e90e759ee1cc4f95521fafbb808e91456ab612039713",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "daaf8597e5cf0e1ddfb4e90e759ee1cc4f95521fafbb808e91456ab612039713",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/shader-proof.json",
+      "bytes": 1409,
+      "sha256": "ad24bd006ffa9b3b792e54526b735f7f3954b4ee9bd225c868ee0adfd729cad1",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "ad24bd006ffa9b3b792e54526b735f7f3954b4ee9bd225c868ee0adfd729cad1",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/stack-color-proof.json",
+      "bytes": 190,
+      "sha256": "0edfdd7d34d924320de4e2500c74e12e44c59a5eb7c278ebe62415b005d12d6b",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "0edfdd7d34d924320de4e2500c74e12e44c59a5eb7c278ebe62415b005d12d6b",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/stack-proof.json",
+      "bytes": 369,
+      "sha256": "03fd5602e0a9f321a400d4f98d04efb830e495e1e4f668125d82eccf5f431e33",
+      "provenance": {
+        "category": "regenerated-desktop-proof",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "runStartedAtUtc": "2026-10-12T18:43:19.633Z",
+        "nativeDrawingVerified": false,
+        "command": "npm run test:medical:shader",
+        "originalSha256": "03fd5602e0a9f321a400d4f98d04efb830e495e1e4f668125d82eccf5f431e33",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/desktop/test-medical-shader.log",
+      "bytes": 2908,
+      "sha256": "8cc647a875835d472094d81cdec0855459b7f9faeb764a09c46f8a91414ad57c",
+      "provenance": {
+        "category": "regenerated-desktop-test-output",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "command": "npm run test:medical:shader",
+        "capturedAtUtc": "2026-10-12T18:43:25.832Z",
+        "pathNormalization": "Owner-specific app checkout replaced with <APP_CHECKOUT>; stdout preserved, stderr not included."
+      }
+    },
+    {
+      "path": "evidence/desktop/test-medical.log",
+      "bytes": 10964,
+      "sha256": "2f43f29cc0dd7ad353eb4bf7d46f5e40838ec13467263685d8b1c460f1196e5b",
+      "provenance": {
+        "category": "regenerated-desktop-test-output",
+        "appCommit": "e1a0042aba53959018f7cba78e85d9dc41affc63",
+        "command": "npm run test:medical",
+        "capturedAtUtc": "2026-10-12T18:43:21.256Z",
+        "pathNormalization": "Owner-specific app checkout replaced with <APP_CHECKOUT>; stdout preserved, stderr not included."
+      }
+    },
+    {
+      "path": "evidence/device/codex-clipboard-c08c5117-ca70-4cb6-89b6-a3c01acddd63.png",
+      "bytes": 154031,
+      "sha256": "10cc821bb24879ec98fd082e9b35635ee078609a4f056f9bff0728f87bed46f5",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "Scan Controls raw-text exception at the Done button",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "10cc821bb24879ec98fd082e9b35635ee078609a4f056f9bff0728f87bed46f5",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3669.png",
+      "bytes": 2054084,
+      "sha256": "7d95a7a924daf0435054e69737a56390161b2b33a91f9b0de7fe794d55260240",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "First custom shader trial: MRI black/white proxy box",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "7d95a7a924daf0435054e69737a56390161b2b33a91f9b0de7fe794d55260240",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3670.png",
+      "bytes": 2079485,
+      "sha256": "dfb2ac78c4f17027fce1ef5e5e2411db276c76776ccf718531bf14bf1ea84e7d",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "First custom shader trial: CT black/white proxy box",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "dfb2ac78c4f17027fce1ef5e5e2411db276c76776ccf718531bf14bf1ea84e7d",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3676.png",
+      "bytes": 2395608,
+      "sha256": "7d055382e08849e7177355f937eb9c6137513272689f871ee9b914a483343e78",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "After precision correction: MRI still a white proxy box",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "7d055382e08849e7177355f937eb9c6137513272689f871ee9b914a483343e78",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3677.png",
+      "bytes": 2289826,
+      "sha256": "0cce4de3ddbee72de1711b4eceba49dc9367865a84010472b9c5570a7c21833f",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "After precision correction: CT still a white proxy box",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "0cce4de3ddbee72de1711b4eceba49dc9367865a84010472b9c5570a7c21833f",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3682.png",
+      "bytes": 1880134,
+      "sha256": "6575de50fa81300929bd8d54b567827f7299e73f4aa79526d76503e61089bb24",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "After material-copy correction: native volume still fails",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "6575de50fa81300929bd8d54b567827f7299e73f4aa79526d76503e61089bb24",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3685.png",
+      "bytes": 2943544,
+      "sha256": "2ab1c648cccba70a99c56daa5991d6ed78888f95ba54d2764ad9bec943c7c736",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "First fallback trial: partial dark MRI layers",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "2ab1c648cccba70a99c56daa5991d6ed78888f95ba54d2764ad9bec943c7c736",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3686.png",
+      "bytes": 2707337,
+      "sha256": "2f6300281f7d32c08699f95fef1746ed7c79be7ad8d1170065a7ac02061b403f",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "First fallback trial: very faint CT layers",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "2f6300281f7d32c08699f95fef1746ed7c79be7ad8d1170065a7ac02061b403f",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "evidence/device/IMG_3687.png",
+      "bytes": 119293,
+      "sha256": "6f66622a7accfd8d5fd34861be309f76040af84287d28c2125b73abf6d1d9520",
+      "provenance": {
+        "category": "historical-owner-device",
+        "caption": "After visibility improvement: Scan Controls layout failure",
+        "recordedDate": "2026-10-11",
+        "captureTimeKnown": false,
+        "originalSha256": "6f66622a7accfd8d5fd34861be309f76040af84287d28c2125b73abf6d1d9520",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/brdf_fsh.glsl",
+      "bytes": 3424,
+      "sha256": "c3f80fcb9ce19e49ecdab39f19a99bac370012b6608208b52074c536af23d36a",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/brdf_fsh.glsl",
+        "originalSha256": "c3f80fcb9ce19e49ecdab39f19a99bac370012b6608208b52074c536af23d36a",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/brdf_vsh.glsl",
+      "bytes": 219,
+      "sha256": "cbe3c63090cf9bdd1149944a8b149f020427698c49eac5302da04d35c311c75a",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/brdf_vsh.glsl",
+        "originalSha256": "cbe3c63090cf9bdd1149944a8b149f020427698c49eac5302da04d35c311c75a",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/constant_fsh.glsl",
+      "bytes": 1257,
+      "sha256": "9da1879abc8e9e74ce45b1a4da6662ade5983f75d86ed866a423d6abf25064d6",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/constant_fsh.glsl",
+        "originalSha256": "9da1879abc8e9e74ce45b1a4da6662ade5983f75d86ed866a423d6abf25064d6",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/constant_fsh_adreno.glsl",
+      "bytes": 1124,
+      "sha256": "3795dbaa36c829e638558077519b79aac1903c5c9ac4fd6cf73082219fdcf35d",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/constant_fsh_adreno.glsl",
+        "originalSha256": "3795dbaa36c829e638558077519b79aac1903c5c9ac4fd6cf73082219fdcf35d",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/constant_functions_fsh.glsl",
+      "bytes": 31,
+      "sha256": "5a5749192ea72f2fdfb8cfff86939739a04c31cab8dcfa7d7815c9a04bfe621e",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/constant_functions_fsh.glsl",
+        "originalSha256": "5a5749192ea72f2fdfb8cfff86939739a04c31cab8dcfa7d7815c9a04bfe621e",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/constant_functions_fsh_adreno.glsl",
+      "bytes": 38,
+      "sha256": "068e22b48356af7c712ef967102b0b92a8849cb8bb1020ebfefb4fc6679fdd26",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/constant_functions_fsh_adreno.glsl",
+        "originalSha256": "068e22b48356af7c712ef967102b0b92a8849cb8bb1020ebfefb4fc6679fdd26",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/constant_q_fsh.glsl",
+      "bytes": 1239,
+      "sha256": "7953bce6b0a9d3e00d0cb48c21d7598e879dc64d752b4415c634bef2aaa9abcd",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/constant_q_fsh.glsl",
+        "originalSha256": "7953bce6b0a9d3e00d0cb48c21d7598e879dc64d752b4415c634bef2aaa9abcd",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/constant_q_fsh_adreno.glsl",
+      "bytes": 1249,
+      "sha256": "703be752d64a5805043975e39d559b03f10a8785f04bf87ba6d8b4385abfc772",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/constant_q_fsh_adreno.glsl",
+        "originalSha256": "703be752d64a5805043975e39d559b03f10a8785f04bf87ba6d8b4385abfc772",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/equirect_to_cube_fsh.glsl",
+      "bytes": 504,
+      "sha256": "6e17293341fd0c5919758730dbfba6dd1a0690d406e439c0d5a32d070695db97",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/equirect_to_cube_fsh.glsl",
+        "originalSha256": "6e17293341fd0c5919758730dbfba6dd1a0690d406e439c0d5a32d070695db97",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/equirect_to_cube_vsh.glsl",
+      "bytes": 241,
+      "sha256": "40f569df25a17bad4cf69d8d34b9bdd071fc08cf68cd7e4a90eda001ecf8f49f",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/equirect_to_cube_vsh.glsl",
+        "originalSha256": "40f569df25a17bad4cf69d8d34b9bdd071fc08cf68cd7e4a90eda001ecf8f49f",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/image_fsh.glsl",
+      "bytes": 154,
+      "sha256": "c86c43ecfafd8fb2871d6739c3c702dc0ab1de9fed73e16e9b353793c3204da6",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/image_fsh.glsl",
+        "originalSha256": "c86c43ecfafd8fb2871d6739c3c702dc0ab1de9fed73e16e9b353793c3204da6",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/image_vsh.glsl",
+      "bytes": 163,
+      "sha256": "55f8286489f7c8897605be54503ae26cd0ea0687db504c5db615b2079fb5279a",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/image_vsh.glsl",
+        "originalSha256": "55f8286489f7c8897605be54503ae26cd0ea0687db504c5db615b2079fb5279a",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/irradiance_convolution_fsh.glsl",
+      "bytes": 2172,
+      "sha256": "3e5ecb3a54b8578f2e0af8d6b07564f68f07c72b8b0a53f0a7f57222f02e9608",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/irradiance_convolution_fsh.glsl",
+        "originalSha256": "3e5ecb3a54b8578f2e0af8d6b07564f68f07c72b8b0a53f0a7f57222f02e9608",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/irradiance_convolution_vsh.glsl",
+      "bytes": 241,
+      "sha256": "40f569df25a17bad4cf69d8d34b9bdd071fc08cf68cd7e4a90eda001ecf8f49f",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/irradiance_convolution_vsh.glsl",
+        "originalSha256": "40f569df25a17bad4cf69d8d34b9bdd071fc08cf68cd7e4a90eda001ecf8f49f",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/lighting_general_functions_fsh.glsl",
+      "bytes": 2924,
+      "sha256": "a0ebc986b121aba958171005c94468adba740dad437521a1b291ea85666c2254",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/lighting_general_functions_fsh.glsl",
+        "originalSha256": "a0ebc986b121aba958171005c94468adba740dad437521a1b291ea85666c2254",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/particles_fsh.glsl",
+      "bytes": 200,
+      "sha256": "aa922f7ec0054a7786fc33fb0ed66c59898bb28edbcde71cf3401caeee767930",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/particles_fsh.glsl",
+        "originalSha256": "aa922f7ec0054a7786fc33fb0ed66c59898bb28edbcde71cf3401caeee767930",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/particles_vsh.glsl",
+      "bytes": 190,
+      "sha256": "d148e13a144a650ca698a1931576bd67366c7d25d7b69737e4ead7df1c994f9d",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/particles_vsh.glsl",
+        "originalSha256": "d148e13a144a650ca698a1931576bd67366c7d25d7b69737e4ead7df1c994f9d",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/pbr_fsh.glsl",
+      "bytes": 5148,
+      "sha256": "0ab24b3b68d753528614ca167ac6e88401aa50d2703e928992860addedd65e79",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/pbr_fsh.glsl",
+        "originalSha256": "0ab24b3b68d753528614ca167ac6e88401aa50d2703e928992860addedd65e79",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/prefilter_convolution_fsh.glsl",
+      "bytes": 3594,
+      "sha256": "4949acb19d4074106f0552bd241fd71f40040a21e031dd3da1c35e388f45e805",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/prefilter_convolution_fsh.glsl",
+        "originalSha256": "4949acb19d4074106f0552bd241fd71f40040a21e031dd3da1c35e388f45e805",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/prefilter_convolution_vsh.glsl",
+      "bytes": 243,
+      "sha256": "1714b1131451efe37e5f262cb028f9a43ec4ca0f4ea90bf5b8586d04050c96d5",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/prefilter_convolution_vsh.glsl",
+        "originalSha256": "1714b1131451efe37e5f262cb028f9a43ec4ca0f4ea90bf5b8586d04050c96d5",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/skinning_vsh.glsl",
+      "bytes": 2033,
+      "sha256": "175c3f0725624ab94711078b9e0b46b92120d3b1543b33ba963c24b3d93715ed",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/skinning_vsh.glsl",
+        "originalSha256": "175c3f0725624ab94711078b9e0b46b92120d3b1543b33ba963c24b3d93715ed",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/standard_fsh.glsl",
+      "bytes": 3048,
+      "sha256": "badec1b752f44cac4e9cf23941ed7542f74d320598185e91019730cd96d0138a",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/standard_fsh.glsl",
+        "originalSha256": "badec1b752f44cac4e9cf23941ed7542f74d320598185e91019730cd96d0138a",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/standard_vsh.glsl",
+      "bytes": 2099,
+      "sha256": "a8071779a806262d8d549cc5b83a27f8479465e7f43051339c3d58b2b1551c4d",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/standard_vsh.glsl",
+        "originalSha256": "a8071779a806262d8d549cc5b83a27f8479465e7f43051339c3d58b2b1551c4d",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/standard_vsh_adreno.glsl",
+      "bytes": 2207,
+      "sha256": "a51a8a19a840770b5611afee6cc4ba42db4fb8a7f095f1d243fa82074ab1b899",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/standard_vsh_adreno.glsl",
+        "originalSha256": "a51a8a19a840770b5611afee6cc4ba42db4fb8a7f095f1d243fa82074ab1b899",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/surface_functions_fsh.glsl",
+      "bytes": 475,
+      "sha256": "0b2216b7b61dc01953832ff49d1f422f2496ac031de94a11cc91f5d882f57c8f",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/surface_functions_fsh.glsl",
+        "originalSha256": "0b2216b7b61dc01953832ff49d1f422f2496ac031de94a11cc91f5d882f57c8f",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/dist/ViroRenderer/ViroKit.framework/surface_functions_fsh_adreno.glsl",
+      "bytes": 339,
+      "sha256": "08830fa36aa28fb0418b2c5662c54dd9bf37692831faf525749f4bfe6d0ab10c",
+      "provenance": {
+        "category": "installed-native-glsl",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/dist/ViroRenderer/ViroKit.framework/surface_functions_fsh_adreno.glsl",
+        "originalSha256": "08830fa36aa28fb0418b2c5662c54dd9bf37692831faf525749f4bfe6d0ab10c",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/ViroReact/Modules/VRTMaterialManager.mm",
+      "bytes": 40729,
+      "sha256": "14c0be8a91d69efc47d086205fce598d7a92dc14f1aa963a23833d6d61a85b7e",
+      "provenance": {
+        "category": "installed-native-source",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/ViroReact/Modules/VRTMaterialManager.mm",
+        "originalSha256": "14c0be8a91d69efc47d086205fce598d7a92dc14f1aa963a23833d6d61a85b7e",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/ios/ViroReact/Views/VRTNode.mm",
+      "bytes": 93203,
+      "sha256": "530f5f6402ac5dde246221fa353f5d03b6ce6cabebd11359cffc3c0323b2c974",
+      "provenance": {
+        "category": "installed-native-source",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "ios/ViroReact/Views/VRTNode.mm",
+        "originalSha256": "530f5f6402ac5dde246221fa353f5d03b6ce6cabebd11359cffc3c0323b2c974",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/LICENSE",
+      "bytes": 1142,
+      "sha256": "f3e73143994e3c37023e24f223519cf588b906c6905fd665cdd4d3f1cf8b2199",
+      "provenance": {
+        "category": "installed-native-source",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "LICENSE",
+        "originalSha256": "f3e73143994e3c37023e24f223519cf588b906c6905fd665cdd4d3f1cf8b2199",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/react-viro-3.0.3/package.json",
+      "bytes": 3846,
+      "sha256": "38791c5cae087119e600495682fc4a27d9272cf55b88230e4dbf52234a818e65",
+      "provenance": {
+        "category": "installed-native-source",
+        "npmPackage": "@reactvision/react-viro",
+        "version": "3.0.3",
+        "packagePath": "package.json",
+        "originalSha256": "38791c5cae087119e600495682fc4a27d9272cf55b88230e4dbf52234a818e65",
+        "bytePreservingCopy": true
+      }
+    },
+    {
+      "path": "native/virocore/ios/ViroKit/VROImageiOS.cpp",
+      "bytes": 5644,
+      "sha256": "956089ed394ec85924cc81fec1d6f2bf0dc3ce4b4a1d37b9360fcd36d9784cef",
+      "provenance": {
+        "category": "pinned-upstream-native-source",
+        "repository": "https://github.com/ReactVision/virocore",
+        "commit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+        "sourceUrl": "https://github.com/ReactVision/virocore/blob/e75ddffc19ea8d006baab434fca495e68556a31b/ios/ViroKit/VROImageiOS.cpp"
+      }
+    },
+    {
+      "path": "native/virocore/LICENSE",
+      "bytes": 1106,
+      "sha256": "277cbe967cb05e11296ba9d38d11e8127b5d449aeab0f475e330c1bf01785b51",
+      "provenance": {
+        "category": "pinned-upstream-native-source",
+        "repository": "https://github.com/ReactVision/virocore",
+        "commit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+        "sourceUrl": "https://github.com/ReactVision/virocore/blob/e75ddffc19ea8d006baab434fca495e68556a31b/LICENSE"
+      }
+    },
+    {
+      "path": "native/virocore/ViroRenderer/VRODriverOpenGL.h",
+      "bytes": 26645,
+      "sha256": "2be614448001bda495f80e0078d67be9483c61b43f5c4a7014dcb3017063fbd3",
+      "provenance": {
+        "category": "pinned-upstream-native-source",
+        "repository": "https://github.com/ReactVision/virocore",
+        "commit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+        "sourceUrl": "https://github.com/ReactVision/virocore/blob/e75ddffc19ea8d006baab434fca495e68556a31b/ViroRenderer/VRODriverOpenGL.h"
+      }
+    },
+    {
+      "path": "native/virocore/ViroRenderer/VROLog.h",
+      "bytes": 16611,
+      "sha256": "4ed9bf7bdd9b5509fcc9ab1f6a402cb594ad4fe16ea7d6e2393cca3269b0bec8",
+      "provenance": {
+        "category": "pinned-upstream-native-source",
+        "repository": "https://github.com/ReactVision/virocore",
+        "commit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+        "sourceUrl": "https://github.com/ReactVision/virocore/blob/e75ddffc19ea8d006baab434fca495e68556a31b/ViroRenderer/VROLog.h"
+      }
+    },
+    {
+      "path": "native/virocore/ViroRenderer/VROMaterial.cpp",
+      "bytes": 23406,
+      "sha256": "258136069b25586faa8d676bfc777948d9e0e0d991984ccdf89604712fbadc73",
+      "provenance": {
+        "category": "pinned-upstream-native-source",
+        "repository": "https://github.com/ReactVision/virocore",
+        "commit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+        "sourceUrl": "https://github.com/ReactVision/virocore/blob/e75ddffc19ea8d006baab434fca495e68556a31b/ViroRenderer/VROMaterial.cpp"
+      }
+    },
+    {
+      "path": "native/virocore/ViroRenderer/VROMaterial.h",
+      "bytes": 22274,
+      "sha256": "6722fcfc799d066ce608853cd260e9d20424b93171e4a9dcddcedb0289228455",
+      "provenance": {
+        "category": "pinned-upstream-native-source",
+        "repository": "https://github.com/ReactVision/virocore",
+        "commit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+        "sourceUrl": "https://github.com/ReactVision/virocore/blob/e75ddffc19ea8d006baab434fca495e68556a31b/ViroRenderer/VROMaterial.h"
+      }
+    },
+    {
+      "path": "native/virocore/ViroRenderer/VROShaderProgram.cpp",
+      "bytes": 33697,
+      "sha256": "70d1545475d8b8f324be8c5a6e2a1600842f39b8d3c251f4ac079f498a12fe86",
+      "provenance": {
+        "category": "pinned-upstream-native-source",
+        "repository": "https://github.com/ReactVision/virocore",
+        "commit": "e75ddffc19ea8d006baab434fca495e68556a31b",
+        "sourceUrl": "https://github.com/ReactVision/virocore/blob/e75ddffc19ea8d006baab434fca495e68556a31b/ViroRenderer/VROShaderProgram.cpp"
+      }
+    },
+    {
+      "path": "README.md",
+      "bytes": 14642,
+      "sha256": "77b9779f221a2c01429df210c725633b348f10838aa6ffcc17d3c4212d1d5f33",
+      "provenance": {
+        "category": "authored-handoff",
+        "recordedDate": "2026-10-12"
+      }
+    },
+    {
+      "path": "repro/.gitignore",
+      "bytes": 14,
+      "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97",
+      "provenance": {
+        "category": "authored-handoff",
+        "recordedDate": "2026-10-12"
+      }
+    },
+    {
+      "path": "repro/package-lock.json",
+      "bytes": 710,
+      "sha256": "17823b4b6ce7e22bcec5e5d67cb5166ed082b59c2e25e9fad45de47a220d08c0",
+      "provenance": {
+        "category": "authored-handoff",
+        "recordedDate": "2026-10-12"
+      }
+    },
+    {
+      "path": "repro/package.json",
+      "bytes": 235,
+      "sha256": "f5b5c87995b212035bb2d8f1387db303c2db58acf8bff2d988e497c17de051c8",
+      "provenance": {
+        "category": "authored-handoff",
+        "recordedDate": "2026-10-12"
+      }
+    },
+    {
+      "path": "repro/verify-package.cjs",
+      "bytes": 2611,
+      "sha256": "9d6c45e36eda312e4a8d13135bd5e643044fe79c645a95ab614ad8a1eb89f2a1",
+      "provenance": {
+        "category": "authored-handoff",
+        "recordedDate": "2026-10-12"
+      }
+    }
+  ],
+  "externalSourceFiles": [
+    {
+      "path": "src/features/medical-viewer/medical-asset-sources.native.ts",
+      "bytes": 664,
+      "sha256": "0ef44103545e5dd9e58717cf1579f05253488fc10ae92df2bcfce075abc5d849",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-asset-sources.native.ts",
+      "gitBlobOid": "67725e107941207e3b3a392d0ce36996644fb741"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-controller.ts",
+      "bytes": 38216,
+      "sha256": "217005739fb3e7fac77f32169f5b5a83506ea674605f59f6298c697e0f433a82",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-controller.ts",
+      "gitBlobOid": "76ecfbc1a79fb50c267066fd4a900a335e13dac8"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-info.native.tsx",
+      "bytes": 5648,
+      "sha256": "a5c22d08a0217de038356a90b600baa500d2a25b794bb1c2f42934b00c3c7dbf",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-info.native.tsx",
+      "gitBlobOid": "a3e87da40e760293554b9cba4f616e865f1381e0"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-model-availability.native.tsx",
+      "bytes": 3304,
+      "sha256": "ea45a2a148c5e686901e8a2ac6cadff82fe28b5d7c1000b3cd07ad7310f8bace",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-model-availability.native.tsx",
+      "gitBlobOid": "ea3bb650f5e5f230e21398849d65b6e84561b946"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-model-availability.tsx",
+      "bytes": 1097,
+      "sha256": "2f7358cf3378d2915e87c91b8eef2a27a0492aa6ccd6548aec7fa58045441f9e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-model-availability.tsx",
+      "gitBlobOid": "df4253a5c068d610fa8fa4a2ec504c1076ff46d8"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-model-picker.native.tsx",
+      "bytes": 1341,
+      "sha256": "8f34cebd125c1f9f0757b1a7016491f85128326d4a9e09182d0dea6622283d97",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-model-picker.native.tsx",
+      "gitBlobOid": "c82a0f88153ec3f7e83dcce87e0448f2c0c82ce1"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-models.ts",
+      "bytes": 1986,
+      "sha256": "1dbcd763fd0f62efa0f752703a56950b4975c6e9fa568c20932480106e84eeb7",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-models.ts",
+      "gitBlobOid": "9911b87c995b7a6faedd1bf6110ebfc224b4ef22"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-navigator.native.tsx",
+      "bytes": 919,
+      "sha256": "3bd97d67644f36a3d5859d9b6dd322049e9e2e1c27954ef2703a46266d2f61bc",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-navigator.native.tsx",
+      "gitBlobOid": "0529ef2da9741e384ca9948e49e664c3abb13fa5"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-scene.native.tsx",
+      "bytes": 10608,
+      "sha256": "c1a9e8a54c9efe1eaf2524aa422a0be1cc268d17aca62a5acac0c80b2a8ee50b",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-scene.native.tsx",
+      "gitBlobOid": "b7eb12140decb46cc0a606467a92e851f09f5f7f"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-sheet.native.tsx",
+      "bytes": 5438,
+      "sha256": "e7adcf4b40c82a4f82efb1c3e544ecaf63333850cec20efa26409f3f87129ecf",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-sheet.native.tsx",
+      "gitBlobOid": "7f026e1f1c274cf5fbe06cc5a549759f970cda9a"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-slice-assets.native.ts",
+      "bytes": 718,
+      "sha256": "2e89f5dc9f7c3a61b1d4bef3e03315cecb9d3337a0ea0780dee56b1c0cffc517",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-slice-assets.native.ts",
+      "gitBlobOid": "4f30eb0defe676a7bbba69b0dcc4e8e2797d3eff"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-slice-controls.native.tsx",
+      "bytes": 6975,
+      "sha256": "a5041cea4258b054431dc30582b928731feb11bd69677737ce9f2b8c37e45e01",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-slice-controls.native.tsx",
+      "gitBlobOid": "c770c65c0bb2b7e51be07895379b7c4d13ba5689"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-slices.ts",
+      "bytes": 4472,
+      "sha256": "60567fe36f2550d8bb8fa8297d22acb413eb0916bcc606df2ebdec20a523efb2",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-slices.ts",
+      "gitBlobOid": "c91ead959130ec3f81be275f9252f93581c465b0"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-stack-color.ts",
+      "bytes": 771,
+      "sha256": "29ad598353cacd069193412a2a353ebb165c13dd06126e2f2b19c473ffc71aed",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-stack-color.ts",
+      "gitBlobOid": "7ffabb13607908dfad2e18c0ed965743cb1bdc57"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-transform-controls.native.tsx",
+      "bytes": 1480,
+      "sha256": "aa294d1147121eba186de405e3804a1f4e55e248c40c1b6e3c02e9476bec43ea",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-transform-controls.native.tsx",
+      "gitBlobOid": "1743b67b0d2335807ff364de4d7f347383b2f27c"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-ui.tsx",
+      "bytes": 3416,
+      "sha256": "cb3fc9a4ffb4548633a517aa2ad2fd4711c1d6b3fa7fd5f7076ffbe2a48149e6",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-ui.tsx",
+      "gitBlobOid": "351c7c5ce1ef4110dfbddbf384bd4149c9535f4b"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-viewer-screen.native.tsx",
+      "bytes": 10936,
+      "sha256": "a43792a4a71dcf2a7a0983ff89ed17a7510b80ed87b8fb0af2578103a3040328",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-viewer-screen.native.tsx",
+      "gitBlobOid": "cd06c079071a6df96c8e01551c244e66c011c90e"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-viewer-screen.tsx",
+      "bytes": 150,
+      "sha256": "abe5e5fadb4c5be9c6d954b534eb9dde1275b998eb407ec0fae5e7dce817620a",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-viewer-screen.tsx",
+      "gitBlobOid": "2fc87b662a41055cee3949c7b75ebbb8a694d807"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume-assets.native.ts",
+      "bytes": 746,
+      "sha256": "961537bdf59a2e8055669d55b05ac70d8d61ab94f201339de970fed2a27b7427",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-assets.native.ts",
+      "gitBlobOid": "d50fe81fa8ca4f329d78d67b3a3ca04097ca55c8"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume-controls.native.tsx",
+      "bytes": 19266,
+      "sha256": "a438f47fa12a15839a9f354ff46c7c137ed8e738c608b2e6973d893879bdc983",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-controls.native.tsx",
+      "gitBlobOid": "ff5a3b0d818e8f9834dd14e3402eefe4a7a3d624"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume-diagnostics.ts",
+      "bytes": 3693,
+      "sha256": "b6fb35109e775325a1c31f5e34658896c7bdbd7f538ebdaa2ceb3a0f2cd23e20",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-diagnostics.ts",
+      "gitBlobOid": "2078fca496ecefb4e1b6e3448c1af09efe2dd2c6"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume-shader.ts",
+      "bytes": 6184,
+      "sha256": "05f09ba820fae3f62e992dfdf59244655cb5f1472bb80f5669e36c4d8e84f83c",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-shader.ts",
+      "gitBlobOid": "acf010f1267a42a80cadc9e3ca6d7ee72d4ff13f"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume-stack.native.tsx",
+      "bytes": 5182,
+      "sha256": "a799325b74c6dbe8f89f2774927b2b405d908757e35b37deeda6f7ef37d5e81e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-stack.native.tsx",
+      "gitBlobOid": "10f58449eb12f99a2e643ef26b035cfba6ee52cf"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume-stack.ts",
+      "bytes": 1601,
+      "sha256": "7951d831f64463993520759aa340391d6a6424bddede4294c77708c5f9b52c02",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-stack.ts",
+      "gitBlobOid": "7eb63953ce6e86a1d52acacc69984c42283a1091"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume-uniforms.ts",
+      "bytes": 1761,
+      "sha256": "77721e45029a431ff04092391179d6ecfd2cbf45687de953aac72c00249c4f54",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume-uniforms.ts",
+      "gitBlobOid": "a094bbd771769f8b77879cc1762a3d792ce083b5"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volume.native.tsx",
+      "bytes": 9875,
+      "sha256": "ac5989cbf937e58c678fed39aac96a06ed73d8b03cea36f072c74211188692cb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volume.native.tsx",
+      "gitBlobOid": "43d072bc7af969d59c2a01e713f1a9c180779aab"
+    },
+    {
+      "path": "src/features/medical-viewer/medical-volumes.ts",
+      "bytes": 7410,
+      "sha256": "cb8c0f11cf53b3351216a3ef0e725608d5adaa6ad1c6f849f6592b7f6b4cfcfc",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/medical-viewer/medical-volumes.ts",
+      "gitBlobOid": "7d1d96fcc2867a348b1f4c30a2099dd832706402"
+    },
+    {
+      "path": "tools/medical/export_slices_slicer.py",
+      "bytes": 14351,
+      "sha256": "e558179412be0720a74727da55e7d417bcb1d070d07b58245811cfb2ec0456f7",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/export_slices_slicer.py",
+      "gitBlobOid": "f1fd6960298db9fc9455633e050fc7b039e9b167"
+    },
+    {
+      "path": "tools/medical/export_volume_slicer.py",
+      "bytes": 14135,
+      "sha256": "6e007ceb0adb2094da3d99531bba3c7ccde1ee0362d5a7501adb06659e55ed96",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/export_volume_slicer.py",
+      "gitBlobOid": "cf3d597886cd52955af0bd0094824f7caf91a8bb"
+    },
+    {
+      "path": "tools/medical/generate_slice_manifest.py",
+      "bytes": 5465,
+      "sha256": "9108813a4457304a5f47297b952f3a35bfe8d1dbde5ad4660457594c6cc22ec1",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/generate_slice_manifest.py",
+      "gitBlobOid": "fb63df6898a2bd34115755ebb4b8d090628f2818"
+    },
+    {
+      "path": "tools/medical/generate_volume_fallback.py",
+      "bytes": 6364,
+      "sha256": "824dc997b896537093383ddb71c6072bb2d1dd00cf0593958eea9fafc827cbbf",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/generate_volume_fallback.py",
+      "gitBlobOid": "e8f3601a1bb403c588a9ea941b5f02865091341f"
+    },
+    {
+      "path": "tools/medical/generate_volume_manifest.py",
+      "bytes": 6600,
+      "sha256": "363899ec57387a99861fa28724506e46194b31d4395639efecf951ccc46bcca6",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/generate_volume_manifest.py",
+      "gitBlobOid": "5e0f71aa6e61475f1405833c926096a67f7a03a6"
+    },
+    {
+      "path": "tools/medical/README.md",
+      "bytes": 29285,
+      "sha256": "576f3a542602e443b800952f870a8a0be81f105293ad4232436d383be40493d9",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/README.md",
+      "gitBlobOid": "54d8a04d9c90afd27540f9f7219b0749feab1c9d"
+    },
+    {
+      "path": "tools/medical/render_real_volumes.cjs",
+      "bytes": 10687,
+      "sha256": "b6f7392856ee51a49e6e1c53b2f24665766a98be52663095a7ca3591c2b5c316",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/render_real_volumes.cjs",
+      "gitBlobOid": "87957b9ebf32ef973764e309650fcbb7b830477d"
+    },
+    {
+      "path": "tools/medical/render_stack_preview.cjs",
+      "bytes": 8152,
+      "sha256": "ebf67ba1ca2d6895f77283cb42caf3c082660edf4f748b46b5b775e5475468f5",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/render_stack_preview.cjs",
+      "gitBlobOid": "3648f1456398b914a50fe2c047777dda37156712"
+    },
+    {
+      "path": "tools/medical/test_manifest.py",
+      "bytes": 4053,
+      "sha256": "95dd55055d127f6f63eed7887f729801fe1524c927566457cf66804f6f38573e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_manifest.py",
+      "gitBlobOid": "80385bf41a8a0ff11a6018e1d783eff5acca1f52"
+    },
+    {
+      "path": "tools/medical/test_slicer_export.py",
+      "bytes": 7750,
+      "sha256": "3fb48e5f9b11f5645693a1f45e9c3516d76e290e3f3fa9319a825b44a32ea9e1",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_slicer_export.py",
+      "gitBlobOid": "42d36e1315898ea0e3b9e3192feb36da806606c4"
+    },
+    {
+      "path": "tools/medical/test_stack_color.cjs",
+      "bytes": 4833,
+      "sha256": "9702a66e3738761e149accc79140fa1bba2496659bcc3e90ff0e7cf85e64d1c8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_stack_color.cjs",
+      "gitBlobOid": "207ce5594d3152e11eebb23348690a5757e7be88"
+    },
+    {
+      "path": "tools/medical/test_volume_diagnostics.cjs",
+      "bytes": 9166,
+      "sha256": "f38d9edeb159dc944d064421eb700163b7f0e3f39386784d9486481089b125d5",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_volume_diagnostics.cjs",
+      "gitBlobOid": "ed23fe20c0f450024587eef0ae842d2fca5f5d85"
+    },
+    {
+      "path": "tools/medical/test_volume_export.py",
+      "bytes": 8908,
+      "sha256": "effeae4ef43bc2eb75b7d28b23478bfef3ba006ee6555a1644dfc1affc3abfb4",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_volume_export.py",
+      "gitBlobOid": "131b239b34aca78f5b9b06c6165f9b10d0821bcf"
+    },
+    {
+      "path": "tools/medical/test_volume_shader.cjs",
+      "bytes": 13038,
+      "sha256": "8bf77ac4ec395646c1134f098c9511a3aaec26d7523583403e7f14f54c085c56",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/test_volume_shader.cjs",
+      "gitBlobOid": "a8f8e820cd0bcf22c0c9a12851a36f00e19b7977"
+    },
+    {
+      "path": "tools/medical/viro_shader_harness.cjs",
+      "bytes": 4248,
+      "sha256": "55669d85fa9142d4d69807e1e875e588b4983e9d92ec63fd3a82f179a5b09eba",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/viro_shader_harness.cjs",
+      "gitBlobOid": "d29fcce1b269fa74bb7497366fb6cf24dd4f2594"
+    },
+    {
+      "path": "tools/medical/volume_export_core.py",
+      "bytes": 4284,
+      "sha256": "5135f8ddd74f49a1a034955c059e647850bcc32208d73fc3732f949d86dc9411",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tools/medical/volume_export_core.py",
+      "gitBlobOid": "e0d071a5b0df470e9e55d4125153f97d28c29ac6"
+    },
+    {
+      "path": "assets/medical/volumes/ct_high.png",
+      "bytes": 1763845,
+      "sha256": "af0d9bcb30709025df6ca6455df6e35546518a26826f758e48353c1a3c541a9f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/ct_high.png",
+      "gitBlobOid": "1749c117bb5e95b7b9ddd76ca238051a33d1c6aa"
+    },
+    {
+      "path": "assets/medical/volumes/ct_low.png",
+      "bytes": 4182024,
+      "sha256": "bbe69fcec6c6ac33cf8d7e836b60d9e300c77702e166efd6f27256752ac708fb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/ct_low.png",
+      "gitBlobOid": "76d76d5ea941dae585df2d3617aa98819a6ba83f"
+    },
+    {
+      "path": "assets/medical/volumes/ct_validity.png",
+      "bytes": 20330,
+      "sha256": "d189b356c89541e7a7d6acd113802aedaae4556dd7cbdf822d91529eadf4fafb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/ct_validity.png",
+      "gitBlobOid": "81f8f8c344f67f03e4f1b36d62cac36cc009f530"
+    },
+    {
+      "path": "assets/medical/volumes/metadata.json",
+      "bytes": 6604,
+      "sha256": "4dc4bfdecd55d3da776ae5cab1e42c4ec5a512bf5017ca643dcfeafbc675ed39",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/metadata.json",
+      "gitBlobOid": "100b16d9b06e743c56648be6eb37f05a404dcae4"
+    },
+    {
+      "path": "assets/medical/volumes/mri_high.png",
+      "bytes": 1974061,
+      "sha256": "4e7aa82e65baf6d7e9d498368475df6cd3c9636b8c99fde0c1c3b02fde2c62d5",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/mri_high.png",
+      "gitBlobOid": "57e1a2aeae244e45d01ab2013563b79e8c7fc7fe"
+    },
+    {
+      "path": "assets/medical/volumes/mri_low.png",
+      "bytes": 3861702,
+      "sha256": "6ef5892e58107e6ebf4309a79d96c06973e2e02409397c92427b54f3cd5ecf49",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/mri_low.png",
+      "gitBlobOid": "8b5a8cbcc2fbcfd600b87d8218dfaeca1567e2a7"
+    },
+    {
+      "path": "assets/medical/volumes/mri_validity.png",
+      "bytes": 20330,
+      "sha256": "d189b356c89541e7a7d6acd113802aedaae4556dd7cbdf822d91529eadf4fafb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/mri_validity.png",
+      "gitBlobOid": "81f8f8c344f67f03e4f1b36d62cac36cc009f530"
+    },
+    {
+      "path": "assets/medical/volumes/sources.native.ts",
+      "bytes": 382,
+      "sha256": "d527c76225dd885b8ef6d2e415851aeba5dde4fc3405eea36d6eaa5943cd0ead",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/volumes/sources.native.ts",
+      "gitBlobOid": "91a2c49d8365c5299112e67d43f8b58449ba84bf"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_000.png",
+      "bytes": 253,
+      "sha256": "229a1a7b0bc607758d0f50a7dde2d6830eebeac44a8dbdd52b16177a1a2db7b5",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_000.png",
+      "gitBlobOid": "5caee381b52a437e91b699b6721d5fe8f4ce92fa"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_003.png",
+      "bytes": 231,
+      "sha256": "4feeabcc721776a1202ab466c309c37f6b9f5439f4ec0babeaee7d2c2126b382",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_003.png",
+      "gitBlobOid": "a97ae9475ad179debacec4e397ec95c5a000dd26"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_006.png",
+      "bytes": 217,
+      "sha256": "c9774f5399ca060488274dae230c1539e4f9932bd68127a0d715af1058d7dc42",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_006.png",
+      "gitBlobOid": "5f936699fc6b07519bddea5fd70ec54b76eb02a9"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_009.png",
+      "bytes": 417,
+      "sha256": "7fbd49e4170f4aa65849c5ee7b98ce06001d4e9aa11f84a98aae7fa5b939313b",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_009.png",
+      "gitBlobOid": "a4b557aa6e821f36b94eb379f4f11bd9e84e4890"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_013.png",
+      "bytes": 776,
+      "sha256": "279d11cf281b8d0cc5a285af99e81706f6e7d00e14d6a1a4cc3ff6e862d53337",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_013.png",
+      "gitBlobOid": "89a6e2e4b06831edaa3aee2782ca813d662ecd8c"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_016.png",
+      "bytes": 1391,
+      "sha256": "a7e2fae03a7c44b6569d7d296ec02fce60023190a412eb111ab7d5577f4f9f8f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_016.png",
+      "gitBlobOid": "6e2b287ebdf15951fda99ac1e0676fa2eb915777"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_019.png",
+      "bytes": 1468,
+      "sha256": "586337ad04ad30d14971f76888a8bd070af2ba12686360c9d030f1f6b7dda81e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_019.png",
+      "gitBlobOid": "486940060e48cc2aa4056c52cc457ca8bcbc711f"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_022.png",
+      "bytes": 1583,
+      "sha256": "5cfa41b42f97599b8c937bd816bab691620ab51c685a7b5dd0f61eecdca77cb6",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_022.png",
+      "gitBlobOid": "9998d140a76be1f2bec2a349f60a0ab4304df080"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_025.png",
+      "bytes": 1856,
+      "sha256": "0c418350c5d6cf79603480ddf84497c7985fd6fb0de6970937c0951213cf5729",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_025.png",
+      "gitBlobOid": "181cedbe9d8eff24929e9700186f15ba15e0a18d"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_028.png",
+      "bytes": 1957,
+      "sha256": "bb5db7b7e22bd9465ebe6d3b72059c1eac5b1f59971ba12de1aa28dce3e60d11",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_028.png",
+      "gitBlobOid": "cbff5003484a2741873c85c516ccd011ee25e9ef"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_031.png",
+      "bytes": 1585,
+      "sha256": "fdcf84d4ee72c278b2aa8b1dde3917444ca3953a653b310eb625dd756acd7550",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_031.png",
+      "gitBlobOid": "161e4fd552280caa1ef04cae570d2ff435e1d013"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_035.png",
+      "bytes": 1718,
+      "sha256": "8c4977341c21c7b4cfd91dbcd0545f486f77e492dbf21da22f614c92dabef8c4",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_035.png",
+      "gitBlobOid": "b1e787b2bdd069f6e12f671b41a83e3571b5a9ca"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_038.png",
+      "bytes": 1554,
+      "sha256": "293be01d84021b6d6e616071a36bd9bd93123fa96ba6a16f435feb144c8dd962",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_038.png",
+      "gitBlobOid": "f0607b76a422786423298c1c2d9ee4cb0b7fe138"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_041.png",
+      "bytes": 1386,
+      "sha256": "54e2d92e1feee5f37f899e9b442f0b698a33165e6316cb2100a3a293cf1f1618",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_041.png",
+      "gitBlobOid": "ffc2b89bb72f65244abf1884ac085358360b0318"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_044.png",
+      "bytes": 1334,
+      "sha256": "c69e6fd90075ade5e47c7c0b797eb55bd3f6a1a714fa8195904b3ceaa8332cde",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_044.png",
+      "gitBlobOid": "610f81ca6b80f2f13760cb6c59391bd4e58ae258"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_047.png",
+      "bytes": 1682,
+      "sha256": "458db031055f8c944a3d95c397a32af094b3d041dbf32f2f4b944e5b288467dd",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_047.png",
+      "gitBlobOid": "283aca3e37072bcc10c5c9e7f0f529e6ec99e386"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_050.png",
+      "bytes": 1433,
+      "sha256": "0e1e69b57180b56246f570ab9c3bec210695ffa2d15e9d9851887713d93a85b8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_050.png",
+      "gitBlobOid": "d71e7ff8ac9838ea5376e7a67e20a3cc78f61c73"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_054.png",
+      "bytes": 2466,
+      "sha256": "7e01a62e6e4fca813cadbf4d6fbdf89b6b6caaebcf5d67557826be36f5b28425",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_054.png",
+      "gitBlobOid": "c22ab0fae82c7bf3dec9295fa43d7a1c07e2d4f7"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_057.png",
+      "bytes": 2957,
+      "sha256": "55bc89e2a6678124cc26441b7e2affc35615355f149de1608f8bc00d33aa449d",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_057.png",
+      "gitBlobOid": "085a85dd3530a389f43de41761234df2ec8c4d36"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_060.png",
+      "bytes": 3146,
+      "sha256": "2dd6cc5b045e5d4cfa8993e47dac0128eb9572e57c31f7f80cf24d3fc6d3b427",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_060.png",
+      "gitBlobOid": "911b19b276bc5176f78084fa3f3d34baf710d5d1"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_063.png",
+      "bytes": 3614,
+      "sha256": "ceab782488094bd727f8015d4df311e2f8cef14729e301614024cc3546eec8bc",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_063.png",
+      "gitBlobOid": "71991b7557f67d3c15ef4119376dfb28d441f8b3"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_066.png",
+      "bytes": 4593,
+      "sha256": "268ccd65d4d17e68b2acd120dfe351c61913ef069a7248d141406edd192a3ae0",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_066.png",
+      "gitBlobOid": "9a5f1e7b8a2a839509e6fca9bb067f12bcf42091"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_069.png",
+      "bytes": 4524,
+      "sha256": "e66b4c388d9d1604b20cbe6aa2790b6c0f1299a82da36fdfe4218e51b7bd8a9f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_069.png",
+      "gitBlobOid": "f2fc81f0bdcdccbed27fac306097dde0420d8428"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_072.png",
+      "bytes": 4020,
+      "sha256": "ad90b59e205726772bbe16a51d96e3b0820cbb5c8ea349519ed35dfab404f28a",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_072.png",
+      "gitBlobOid": "8e6866b21404cf99377475b1ce1fa8763a3afe4c"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_076.png",
+      "bytes": 3300,
+      "sha256": "61d16fe10480c0005aa4a334c52fb3343b3d438210632e036e3165eb262ed203",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_076.png",
+      "gitBlobOid": "dfa8a34440750bed5bc83adfac3ba5182e01c85d"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_079.png",
+      "bytes": 2976,
+      "sha256": "d57a214706849af6f517f139fba57b741aa1db8e32cc331f83e8bc2c3aa8de3e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_079.png",
+      "gitBlobOid": "17155aa53dd14d41d9c7b9e24100e70bf79e1ca5"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_082.png",
+      "bytes": 2935,
+      "sha256": "c1782153c874d2dfdd2fb81ca3ca58acd89b2e31e363f4eb9f56f4da945ca035",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_082.png",
+      "gitBlobOid": "7f33e63442d094b90cdfafeae0d9245bd23072ef"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_085.png",
+      "bytes": 2875,
+      "sha256": "3e7c20143be0e966d59bd4e3f590795add560c2ec068e6d20b5e9bb284c6c9d9",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_085.png",
+      "gitBlobOid": "33991275ff0681ed77f12be5b1b523cb6227f853"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_088.png",
+      "bytes": 3111,
+      "sha256": "2b1a95a6038459539b04a477e33c77b86cb524b3bb49a0141ea36fdbe16f5fad",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_088.png",
+      "gitBlobOid": "117747964d0382d648940a29a009995ebaa920af"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_091.png",
+      "bytes": 3473,
+      "sha256": "2fb0e59c1aaa16e68971573c948719c74655ed4046e77fcfb1ea3b275750b5a7",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_091.png",
+      "gitBlobOid": "03132481e8b05c89f2e37bbd4aa941724b1fd615"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_094.png",
+      "bytes": 3682,
+      "sha256": "c4028811a5293f02b88ab0bda32a3079d8753d8ee095d9110f9b51bf1e04375b",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_094.png",
+      "gitBlobOid": "999613824235b6f4ecc673574a9ddb730257ff23"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_098.png",
+      "bytes": 3478,
+      "sha256": "a5776945942086d1ff58143d41cc532bb9468913084a6ba6eb576ee312b56703",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_098.png",
+      "gitBlobOid": "e648f0799124b2d228dc87df5287410379707e27"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_101.png",
+      "bytes": 3689,
+      "sha256": "cb3f6b23f9188b434c19fb8055d5bc709145ab03c60999f6e0c9b9e254fa2d13",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_101.png",
+      "gitBlobOid": "b897dbfac10cc812e6893de1e3be3686ebe725ae"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_104.png",
+      "bytes": 3619,
+      "sha256": "a06a607648d99618f643cc5bb529ab52a05ccd1f856d48c8d33f986adbb72fa5",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_104.png",
+      "gitBlobOid": "e8648c2bd70af2b3794caf8334569a9f23c3c4e8"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_107.png",
+      "bytes": 3783,
+      "sha256": "0910d412b5d41764f92682513972e0f912390b57073b63673eefa0bd25e04826",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_107.png",
+      "gitBlobOid": "35517ef119534499caf3480c237d54ed36a9e0fb"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_110.png",
+      "bytes": 3609,
+      "sha256": "78303daa313f77cb2d37bb3d9da42eff4ccfabc0929e9be88db7a02462c782d4",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_110.png",
+      "gitBlobOid": "16d5342bc0f7dae94088b99013d51f6c357999fe"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_113.png",
+      "bytes": 3683,
+      "sha256": "b2c83a4d0bd75a169437c1759293f597dde152920346719571c2bb2076a10bec",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_113.png",
+      "gitBlobOid": "93f0ff17ac7cb1ed80dc685fb84b4e327127706a"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_117.png",
+      "bytes": 3827,
+      "sha256": "02836e6034f18f491c05e449b7b4847ff4f7ff2cdc19cdc02c5aacc161a4de01",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_117.png",
+      "gitBlobOid": "2f580571a1da6760259f704bd8dcfdf707511a72"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_120.png",
+      "bytes": 3995,
+      "sha256": "67b1e640e6416841784b98e491ac8f6c6905549d8b8fd6d06e19ebac10cbdce5",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_120.png",
+      "gitBlobOid": "5820bf4d37ee53306b7a2c50abdd922f481938c2"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_123.png",
+      "bytes": 4096,
+      "sha256": "5634ad51ac24bf4789f8b3c10a9a37a0485e64647ba60d12b6e91b9064a55ffa",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_123.png",
+      "gitBlobOid": "f196693c5b2d487f9f31609d8361bfe08afeaf2f"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_126.png",
+      "bytes": 4055,
+      "sha256": "30a40e0d10e082b7b14d9c48238f39c944ce3a5d5257d02d8b5c238ba42d54ad",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_126.png",
+      "gitBlobOid": "d7b44393ebbe653301f94560f7778a6b941628b7"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_129.png",
+      "bytes": 4107,
+      "sha256": "62fbbebe121f97e08fe46999891cc2d01a5aa7adca1c10a21b16b7198629b795",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_129.png",
+      "gitBlobOid": "3d3b1feca8b13b04d9d36df8f75f5d99b08cc47b"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_132.png",
+      "bytes": 4118,
+      "sha256": "13f1ae848417da268269b37c04c87dd5982a7ecb9439b105a2f7a361663e26a2",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_132.png",
+      "gitBlobOid": "2989974f9cc87445508dc652792bce92d17c9bb6"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_135.png",
+      "bytes": 3918,
+      "sha256": "188a453510fb582af063642f6d578d4f68a0dcf2f361f993a255628868cc385c",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_135.png",
+      "gitBlobOid": "ae77348d7972ff1d3021aa7d2df176c6acd4a0fc"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_139.png",
+      "bytes": 3305,
+      "sha256": "049857956799f301feaae7316ceeac7c4cbdd4ede568ec9ea33b196986c823f7",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_139.png",
+      "gitBlobOid": "67682bde37ec2265a2a4a5426fb0e457a0696edf"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_142.png",
+      "bytes": 2245,
+      "sha256": "3780caf5be99d41354feeee9de8b14b5e39fe0c4d604e759c8fa5824d75cd4d3",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_142.png",
+      "gitBlobOid": "099d5243999697419b03ebf5fa9bd4a24a752663"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_145.png",
+      "bytes": 179,
+      "sha256": "3b2e6eac48076f216003be0d52e818fa4715a39f67284b6efda8ae35e6c80c3e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_145.png",
+      "gitBlobOid": "b24e739a5b3f9e902324440e5e210e352a9f1e8f"
+    },
+    {
+      "path": "assets/medical/stack/ct-bone_148.png",
+      "bytes": 179,
+      "sha256": "3b2e6eac48076f216003be0d52e818fa4715a39f67284b6efda8ae35e6c80c3e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-bone_148.png",
+      "gitBlobOid": "b24e739a5b3f9e902324440e5e210e352a9f1e8f"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_000.png",
+      "bytes": 1437,
+      "sha256": "cd9b0fb2a95893014e126ef06ebaca0dffc77608fadf487e026c97a6c3d8cabd",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_000.png",
+      "gitBlobOid": "afa87a5562edf860b8d1db86fef1f5f0b443af9d"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_003.png",
+      "bytes": 1971,
+      "sha256": "566268e50d989eea2da1e867cfd717319c6d3595f96283e3b0b07f3a27f49dd1",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_003.png",
+      "gitBlobOid": "56081b77b6e26b11ce1bd3ad7aa428868f36ba97"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_006.png",
+      "bytes": 2319,
+      "sha256": "fa95895b9daf54bb045b96764addf9a86b8a94308af557d5dfee59289d87c0ef",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_006.png",
+      "gitBlobOid": "b3924895c96e5d657b4ba9511fd4f4c448e39765"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_009.png",
+      "bytes": 3151,
+      "sha256": "5e4fda0e43c1ada5f55c1055cf87f8e643570d3fecca03c6cd63f98660c43a02",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_009.png",
+      "gitBlobOid": "cf9774709d28c0cb7ba0b5035ca95dc2b58b33dd"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_013.png",
+      "bytes": 5048,
+      "sha256": "70a63d3442bb36ff0bf8499d62029932350d63438c0823a4a61731c52339cf72",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_013.png",
+      "gitBlobOid": "2db6bc7dd04d196ca3ce33f14d1fd010486c0bfd"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_016.png",
+      "bytes": 6253,
+      "sha256": "c4d588f23eaf12cf8626ea9329f1d365f7028848ee6455b0e3c6e9a968b88456",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_016.png",
+      "gitBlobOid": "08b8b4be6180d277ccf1619e4618384a008ae7f3"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_019.png",
+      "bytes": 6874,
+      "sha256": "a9a7a7f3bf9816ca6ccdfe71e87e61784248a37b0e41caa6f8d2aed5738a58ba",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_019.png",
+      "gitBlobOid": "8185400484790079c60b6e2d5c792f603d19425a"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_022.png",
+      "bytes": 7926,
+      "sha256": "4e7377a36d70b963dd623245c1b0fe8f9319d60ed71bbe0becd5db5c1e5caedf",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_022.png",
+      "gitBlobOid": "a4a133b5237ec8e541117f8d45bebb229b2b55c7"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_025.png",
+      "bytes": 8783,
+      "sha256": "588530d8fc168a986359e99e59e6817667c19112fc235df3f367328ed9e3b10d",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_025.png",
+      "gitBlobOid": "135998b302c517c58948fbcacf5f0c5eb767f4a6"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_028.png",
+      "bytes": 9507,
+      "sha256": "d9415bdd4052a9452cfebfc0e41b4b01dd4991a81e28102f2b0a3fabdab4cf0a",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_028.png",
+      "gitBlobOid": "d77319d991ff321871cc9cb046d8df34fd0ac450"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_031.png",
+      "bytes": 10280,
+      "sha256": "08186b719f0b46c1f324591724571792d283793f06346a92599217697214ad4c",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_031.png",
+      "gitBlobOid": "0ac45b352afd4631309712abe68b57ea97a19211"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_035.png",
+      "bytes": 11064,
+      "sha256": "2462ab015cea9e8c9f4e354ab1c1ffc666f899b83290d72a96169036ecbe6989",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_035.png",
+      "gitBlobOid": "67091066e077379da6660ef7ac5866528b80bfa2"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_038.png",
+      "bytes": 11504,
+      "sha256": "b210c65851568373530cfe5d5f6aa09f74754e1b44f48effe2cf2ec530d282c4",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_038.png",
+      "gitBlobOid": "f07ea1001831c2fc85efcc6167baa0fc49e50ce5"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_041.png",
+      "bytes": 11325,
+      "sha256": "f5840bf628c376b0e6e7f68aa912584bfa135e90bac3e6f75e9ac8ab855398ec",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_041.png",
+      "gitBlobOid": "c2b2be1db4d9d45f57a9bd7229834c868d83162b"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_044.png",
+      "bytes": 11600,
+      "sha256": "9bf3d56cf4f6f8374b234290c8a432efdf3a8edce60200d57cab7ccfd243447a",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_044.png",
+      "gitBlobOid": "6adb9db2f8f13865db975eb207cc8a72f9345dd5"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_047.png",
+      "bytes": 11690,
+      "sha256": "ac168550614aed76fe4946163c5070a25a9254d2576a5dd81b92d95d0728ab6a",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_047.png",
+      "gitBlobOid": "e4c0be500def080538c57237e8c098393749b89e"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_050.png",
+      "bytes": 12301,
+      "sha256": "9088a2e7d5f77c811dca11218763d6a240562879e310b4bd00ed40367d1369fb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_050.png",
+      "gitBlobOid": "4041302464e2f979ab6dacb574cf2b2a01c50c05"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_054.png",
+      "bytes": 11719,
+      "sha256": "1f13ad634d3b496278b9562c8238d8c778aa1e49decc2b1d783daa6df4fc0c45",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_054.png",
+      "gitBlobOid": "f538c9fa862115993339a6f3c73454d3f57a306c"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_057.png",
+      "bytes": 11832,
+      "sha256": "6bde3d743aa72f3d7d1bcb348e8ee3aad53e6ebc78014d9b3c98d1a3dcf5f423",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_057.png",
+      "gitBlobOid": "699e38c9973db80d5ab8d706adff9465490816fa"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_060.png",
+      "bytes": 12522,
+      "sha256": "19d801d968d12d21748a0c6d76b403d11477f61fe00c7faf38adb887c2f3239e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_060.png",
+      "gitBlobOid": "acccb626b616609620c8b4f7603e63a4c94a87ac"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_063.png",
+      "bytes": 12483,
+      "sha256": "5545692aebd2ac69b579fcc9cea65c026c67e3fd0747732963c4a4256d2f784f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_063.png",
+      "gitBlobOid": "9675c5178d022239245bbd3a2233f92bd0f51160"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_066.png",
+      "bytes": 12080,
+      "sha256": "6399ae00221a486cb6d2d44678fdf601c438397d492972b8d45bfe389fc24c85",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_066.png",
+      "gitBlobOid": "02170b2481c90709f5cbfcc962e6b60066f2798c"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_069.png",
+      "bytes": 12616,
+      "sha256": "ecf540fb17806e88925d3c71575c3da33408960424e504fbb08b3a4fcab06dcd",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_069.png",
+      "gitBlobOid": "e4ee5d49c8671b803cfa31c8c862fce78e67ee88"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_072.png",
+      "bytes": 13243,
+      "sha256": "89aff9f0d10475bfed03336cacbabd969438c9bc3432ab5cbc9fd77840895a40",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_072.png",
+      "gitBlobOid": "44e9dbde4c0fb93dcbfc0aec60638c1bedbfb552"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_076.png",
+      "bytes": 14509,
+      "sha256": "b2e7dcc66922557a818c55defd23badad1183d1c0ffec8649785acf5588ab0a0",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_076.png",
+      "gitBlobOid": "23d4e188053f0047838c29b907ae91944c1080cf"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_079.png",
+      "bytes": 15127,
+      "sha256": "3de03e6377d91acc7fd0c2db93ab53755763c7c20b9ea127bafa4906cb7658d8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_079.png",
+      "gitBlobOid": "b83fce7f21b821b87f31245bf00ace77580288e8"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_082.png",
+      "bytes": 15208,
+      "sha256": "1792f907b49d95095cffe464927bf52d91b84c2274f8497e84dba695271757bf",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_082.png",
+      "gitBlobOid": "8e935e8883eaea48e268701e3c22c26419b9596b"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_085.png",
+      "bytes": 15264,
+      "sha256": "cd68dd2f35c34ce5c58acbe82d2cdd39ee137947421e573850ca623e3203825e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_085.png",
+      "gitBlobOid": "9e32db9a0f4c978cf1eeaa42e43a0002f970205d"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_088.png",
+      "bytes": 15595,
+      "sha256": "c1207f297e467448bcf87307fa97f54b1de101dfe0bc3aafe16b749baf13e3af",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_088.png",
+      "gitBlobOid": "98f1ed923dbb294a2b790642f54c19bda7b7a7e8"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_091.png",
+      "bytes": 15818,
+      "sha256": "58b4617ce4c2b1e118ee321cf06d3957802c3d323b08d1bf64b4a9d8de326012",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_091.png",
+      "gitBlobOid": "802eb88ba841d0f49d0f2df358c89dd215208d9f"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_094.png",
+      "bytes": 15246,
+      "sha256": "adaa16338f5c6d78d65dd09a0304f2eb1a7d948f8a841828fdc8731d212c522e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_094.png",
+      "gitBlobOid": "0761eab80263e748517b8c3e1657913948ea0e4a"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_098.png",
+      "bytes": 15092,
+      "sha256": "ede0f141d7d2b701fa5d226419c1b383e2797d1919ece85ba9f20bc529dd8b7b",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_098.png",
+      "gitBlobOid": "3dd73558ba8c3e2c5424337338d80e2177d71e2a"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_101.png",
+      "bytes": 14768,
+      "sha256": "f42524056f612c15b3693eb53ab3c8cf505371548368a5a515118b5ed502527f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_101.png",
+      "gitBlobOid": "23c0c8643bfd4b5b5426ac3d929bdfc4f2fe5b3e"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_104.png",
+      "bytes": 14668,
+      "sha256": "c116029094842b3beb8d16dd7597795b1fe4cebfc89f999729ffb9aecdc79777",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_104.png",
+      "gitBlobOid": "703c8a66a2c8f505999739ac1835ae4ba233c4de"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_107.png",
+      "bytes": 14106,
+      "sha256": "7ac0cc36f8f5445d00dc9ace0d06e21e65a7cc1bd1b7f690892ff81df690926a",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_107.png",
+      "gitBlobOid": "2b9252b61cbba0b9633a07fefaafecdc59d55810"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_110.png",
+      "bytes": 13930,
+      "sha256": "00f8a908149c50d47f4e927c1b15140e6e7d465f7617a69f1317881172c85495",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_110.png",
+      "gitBlobOid": "15d2202f63ff50a36e5058041616901c7144aec5"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_113.png",
+      "bytes": 13123,
+      "sha256": "6a335dd92e8ca13e009f5f6cc9591284e5e8e1b945beebda173d176d7f9772eb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_113.png",
+      "gitBlobOid": "c477e7cffed7ee4f4130f4bf831ec3acb612d39a"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_117.png",
+      "bytes": 12632,
+      "sha256": "d86b46d3e5fd662c61e9dc8422fc85e00307135eb4e23e7623cee92f027d2efa",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_117.png",
+      "gitBlobOid": "2e6c2e23c46cb9aaf479adfd0b5dedcc7ca9588d"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_120.png",
+      "bytes": 11412,
+      "sha256": "29cd9fa94767f958cbef066a97bd37afb30075ff5d54238b2bedf27255ef1bf8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_120.png",
+      "gitBlobOid": "3e640763d03f9af6b633cc33db58be4fdf5b5c1f"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_123.png",
+      "bytes": 10843,
+      "sha256": "c53b7a42d8543044ed364e181942523703f7a3c570b7a60240b24a9bd12d4ba2",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_123.png",
+      "gitBlobOid": "d18caeda0d5861a3bf4371c016ec4f60ba2697da"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_126.png",
+      "bytes": 9623,
+      "sha256": "a4e077c51be21b3ea9473b7fef4d535148ae2dc0295d330af48c2e45cfff292f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_126.png",
+      "gitBlobOid": "fbb2d0189059941e38e5ef82b406ef068acdbcc6"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_129.png",
+      "bytes": 8277,
+      "sha256": "966cca986e2aa2d352ae1ba2a940b827bd16a1dafceb7cdae88480b7642439a1",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_129.png",
+      "gitBlobOid": "cd09cf23171bed47fcaa5e32c5230fee28a5780e"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_132.png",
+      "bytes": 6838,
+      "sha256": "57477495cf0a626010d8648bb0087197a717a3a609a48cf1bfb836e16b47b40e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_132.png",
+      "gitBlobOid": "0672ebb6b2de23e82da5243f87b2992a9bd849f2"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_135.png",
+      "bytes": 5290,
+      "sha256": "189dac8c82168c241787c7dcae9313afd1dc54df5f793ea7e4f6731ea92b5cf7",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_135.png",
+      "gitBlobOid": "6c6690308659dda03705b56c5a14cd687a89bc8f"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_139.png",
+      "bytes": 3138,
+      "sha256": "68ad43408795b89fb3814033fde6f8b2d7a9921330f3de3efcc3f24ef533d4ee",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_139.png",
+      "gitBlobOid": "6dc32a615a5cf2191acdd0629ed5265ba525725b"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_142.png",
+      "bytes": 1656,
+      "sha256": "881b21f928d1e33ab47915d344880de62d004341a15f38b91e3cd76fa9f43c43",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_142.png",
+      "gitBlobOid": "ec0c359e9bac2783d9236763ea911a7454df2753"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_145.png",
+      "bytes": 547,
+      "sha256": "2f0d4b2db7fc2ec4f1d611d1b6453ad868c3fc5d58ffd71804568e58c59790d3",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_145.png",
+      "gitBlobOid": "0e7b3ff7d6474f6ad879277220abb4d872669642"
+    },
+    {
+      "path": "assets/medical/stack/ct-soft-tissue_148.png",
+      "bytes": 179,
+      "sha256": "3b2e6eac48076f216003be0d52e818fa4715a39f67284b6efda8ae35e6c80c3e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/ct-soft-tissue_148.png",
+      "gitBlobOid": "b24e739a5b3f9e902324440e5e210e352a9f1e8f"
+    },
+    {
+      "path": "assets/medical/stack/metadata.json",
+      "bytes": 37585,
+      "sha256": "4957690ad1d0c0294793d78cb7da4b5e054564b9722f596f0f0297abeb6c07aa",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/metadata.json",
+      "gitBlobOid": "e3b239157c08d8fb8a56e8e788d6daedff62a844"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_000.png",
+      "bytes": 1562,
+      "sha256": "ae2b065851626e9223d1f2e8163e37edc4a95e2672ecf6a86da2bb022a0995eb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_000.png",
+      "gitBlobOid": "d468c3fdf5fa5b991ed19bf0e8db5cd91ec0c6af"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_003.png",
+      "bytes": 3475,
+      "sha256": "8c18c90dc42be51d0a8027405868993ca0620ffbdc7b5650e20c9ab0e9a861b1",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_003.png",
+      "gitBlobOid": "56e977bef16666e1ac90c61b3b99b90a45cba258"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_006.png",
+      "bytes": 4492,
+      "sha256": "cf64ca9789ded41c716f38f3c4a462a3921f8b480fc1d7b7fd3aee19d868969e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_006.png",
+      "gitBlobOid": "3e5013820c66cfc73044088aa56dbb5351b6b579"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_009.png",
+      "bytes": 5551,
+      "sha256": "60db11a56500f794e8da6260e678724e7740cdd151e2a857f64a3d51512756bb",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_009.png",
+      "gitBlobOid": "50763bca3e02c7967fca8c48d210c502b63d9e71"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_013.png",
+      "bytes": 6734,
+      "sha256": "781a6f9d17924e4509c9b6141a71445b8db6f3508ec702cb61f98b856921afb9",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_013.png",
+      "gitBlobOid": "0701bdea82d0b6f0b7ead1e95cc2c527da324e2e"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_016.png",
+      "bytes": 7872,
+      "sha256": "b5f70d1404cf0042e9dc0ab778d128395972c6204f69e3e16dde4f260476bb5e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_016.png",
+      "gitBlobOid": "767267e245f5cd36f7d313d7461be7cc1e6c8c73"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_019.png",
+      "bytes": 9137,
+      "sha256": "32b46736d09e5c489daeeea6465dfc656fe834ceb0f81c155efb6919c4ba6ae8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_019.png",
+      "gitBlobOid": "14120263122796cffa106f29773c6ce517580f5a"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_022.png",
+      "bytes": 10295,
+      "sha256": "a4718bd0ec853032d871803bc2c9c18410bf9a3f8a8e8ab472722b4e256fea00",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_022.png",
+      "gitBlobOid": "0b91ceffdbd50327058dc801c7ddf5daebf4f4db"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_025.png",
+      "bytes": 11624,
+      "sha256": "194b7a387c48b023d193c1497f6a60f1d6abf05a7d9cbb44b130d69d6e04202f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_025.png",
+      "gitBlobOid": "0ecc290d317bfaaeccbfaeec04d03de296078058"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_028.png",
+      "bytes": 12854,
+      "sha256": "995ad0a5b260d14acc8d6b64a77318c7c7adfbf407fb8b8abb043402283890f8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_028.png",
+      "gitBlobOid": "dbf624023abf7c2057034f0fa1a1d67496b9b19c"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_031.png",
+      "bytes": 14401,
+      "sha256": "ce4b5b534a1b0114f097df316223fbc9a099eb98bf2f9da4b05c6a649d9cb3e9",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_031.png",
+      "gitBlobOid": "3e84f5d9934a0dd20921bd7a32b75436da704cb1"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_035.png",
+      "bytes": 15655,
+      "sha256": "f62a65533cfeffcf99891abc9f8a1ae63dfed51d6e83d311b3fea7002d09f232",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_035.png",
+      "gitBlobOid": "3be2e02ec82facd92b7f000df0304d8a44f9d879"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_038.png",
+      "bytes": 15852,
+      "sha256": "81f54d1d8a229c18f46e26fed4f80e35257f980266c5943169614a86b001b1d9",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_038.png",
+      "gitBlobOid": "755c8bae36a4121d8bfa18de8cdd12b8f83624d1"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_041.png",
+      "bytes": 15851,
+      "sha256": "48bd2de2096374aa393aa7785ca5910c383c2c15ae763894d518e3230f442087",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_041.png",
+      "gitBlobOid": "a3753e69045bcdad76d93931f2ad4cbdb97784e8"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_044.png",
+      "bytes": 16239,
+      "sha256": "8c6179b47a45a781991bbb777e9e7df2b86508341253f463734e281b9caa0365",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_044.png",
+      "gitBlobOid": "769a54fb55fcd15e9d155014747638d3b56fc101"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_047.png",
+      "bytes": 16909,
+      "sha256": "3815fb2012a3f00d0e1753ed5b04581ffbfa848801ee872c34e51e9a34cac878",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_047.png",
+      "gitBlobOid": "d298987c8a87561aeddef099eb11e343d4e31424"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_050.png",
+      "bytes": 17797,
+      "sha256": "6dca70c35dfa55acefc11b8d402f7c070fcecb884d99c12647fb55f33da989dd",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_050.png",
+      "gitBlobOid": "ca054e21e9d15d830c5af1271f980bfdb1d1a7d6"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_054.png",
+      "bytes": 18086,
+      "sha256": "5d46942600e4bc01bf2c60c41bd007a4dd689211b73e2074a88054e832c542ce",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_054.png",
+      "gitBlobOid": "44f4d1dee33a5cf0f152ecc896992da0bafd1b55"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_057.png",
+      "bytes": 17629,
+      "sha256": "aa5e5db476d68f3b9fde7d6362f6c3fd6e4ba36f450f9390d9d0fd9077d4c084",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_057.png",
+      "gitBlobOid": "c8298aae3ccba6800eb1f91b404c721cc34b38c4"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_060.png",
+      "bytes": 17425,
+      "sha256": "d0d3ab688b94c122ee5132742428d7490e7972383274068213d43bf9fc892d3c",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_060.png",
+      "gitBlobOid": "0acbf428fd71c92c9096bfa434b4a249a95072d8"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_063.png",
+      "bytes": 17285,
+      "sha256": "bb863cfee6f842f3d71b31e81baac269b65c459029c1b2cb9fc3bf63260142d2",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_063.png",
+      "gitBlobOid": "9af93e70b09caa816dece1f56965ea19077d7719"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_066.png",
+      "bytes": 16844,
+      "sha256": "a7d5b32128747862243ce655def8fe7dfd4b639f7965ede0e942a31ec812bc42",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_066.png",
+      "gitBlobOid": "0db8002ffcbf2b6e1ffdf4856f77762ffbdf624b"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_069.png",
+      "bytes": 17051,
+      "sha256": "4d5c3c03756d3e216aebd21ecba14a313ae205591e5f43263dbf8f3e0f68b272",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_069.png",
+      "gitBlobOid": "ff9452a3191773e7cac487c800cba5b42849e09b"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_072.png",
+      "bytes": 16828,
+      "sha256": "bbfc268f085419a21eab16e8676597643b05c7bef37e187c1c44016e7bbb1caa",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_072.png",
+      "gitBlobOid": "d3ec17219b4d441fc77a6a95833b9323ea542c35"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_076.png",
+      "bytes": 16914,
+      "sha256": "f74d75bfdc0cae1ca2c6ee2c87fbec4945ec13e68b2be9890ea02be522f06390",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_076.png",
+      "gitBlobOid": "e26fb7c5adbcb2f1b680c0b68e41c268d1393a27"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_079.png",
+      "bytes": 16861,
+      "sha256": "0837c925fe2a8a2912542af4ac1499cd08a91f589d552bac1259b355da28e80b",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_079.png",
+      "gitBlobOid": "6b61e5d5e8105f065af1eadf14864dbef4392798"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_082.png",
+      "bytes": 16886,
+      "sha256": "cf95618e10d335ee5131ccee78eb701ee1a5a0a281b05a2831e4172c12011f5c",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_082.png",
+      "gitBlobOid": "dd1cb7dfbd2cf705883dabfca562d72fd6c6d571"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_085.png",
+      "bytes": 17253,
+      "sha256": "b570569c5cb505121b6bc41a892fad726ee086f69ad90c473ed1d2ff11eccdf8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_085.png",
+      "gitBlobOid": "96aa1a530457909e5e54b01e965a69b94fc14f15"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_088.png",
+      "bytes": 17611,
+      "sha256": "3b3f70e215922124c1566c3e72117aa18fc1b35e1985ef0145b88056f9a82f40",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_088.png",
+      "gitBlobOid": "8973b7c710a02120b0a2242a68c5c4796ecddf83"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_091.png",
+      "bytes": 17643,
+      "sha256": "b2bd149eb3073550faacf8de3b0660279c845baedb04a015c6a469518f85988f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_091.png",
+      "gitBlobOid": "0b9e5a8378ed6921c57e05c30e56ff3824361ad1"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_094.png",
+      "bytes": 17051,
+      "sha256": "baa42be24f5ac3902814151d84ac7b0915d04115cdab9dde9e7da0404027d43f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_094.png",
+      "gitBlobOid": "b76bcea8b5125fd9334768a9108c1c2fcfbe6e53"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_098.png",
+      "bytes": 16771,
+      "sha256": "5c51dfd20afeae276cebb585cac9ab46dd52fe3563a2d5ecb29564ed6f3186ec",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_098.png",
+      "gitBlobOid": "2ec40cdcaed301c051bbb54870227d87561af6dc"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_101.png",
+      "bytes": 16616,
+      "sha256": "461f6a7c3307b8ebdaa1628ed85de4f95b018985c39183945ba930fe541379c4",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_101.png",
+      "gitBlobOid": "185cb24a2c2913f3a7b474d9c8192a68d686898b"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_104.png",
+      "bytes": 16296,
+      "sha256": "22d525a02ddf219e2b459e1d617a97bfcffeec5dfbda94179fe3a01f22e1e9c4",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_104.png",
+      "gitBlobOid": "303acbcd2ffeadebebee8451bee082dc205197a0"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_107.png",
+      "bytes": 15882,
+      "sha256": "3f4c8298f2ac6041dc12841ffbd108667bae35912911955143963b11590d203d",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_107.png",
+      "gitBlobOid": "7417a1929d57eb11176c48c4e99c85ac278b2b5c"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_110.png",
+      "bytes": 15373,
+      "sha256": "6bca74b5ac617226d71865f7b7f20018be726f7e97ba20f03dc268e3284a4e41",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_110.png",
+      "gitBlobOid": "098cc73e5c5568187b8fd525ee5ed0c453830ac8"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_113.png",
+      "bytes": 15132,
+      "sha256": "b4de6aab4aa1fa2420101c71e4cbc7979d2296d018070fe94ce03e3ce05a7256",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_113.png",
+      "gitBlobOid": "042e7aa94d9304d44eeadfb41699484d47ec0880"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_117.png",
+      "bytes": 14409,
+      "sha256": "11ff4a84d7866a7b859047313178e4d8ddd8cc4994b9b512846113fc0cd76b98",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_117.png",
+      "gitBlobOid": "56003d0b520ebe1fac7456ca41faedf42c3b0e9b"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_120.png",
+      "bytes": 14064,
+      "sha256": "d3c80a064057eaafc3d82200b83d2951e81aff04417053b2ba0f8ebad2445355",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_120.png",
+      "gitBlobOid": "eaee4222d221ee0e92e2eace85854e3fa329c34b"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_123.png",
+      "bytes": 13547,
+      "sha256": "30007dc3d609a5d76997b09491f2f0a2c0aa273712c6744b69d2f7756034be5c",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_123.png",
+      "gitBlobOid": "bac4f8c1a42146fef9c76bf46d4a25839fcecec5"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_126.png",
+      "bytes": 12865,
+      "sha256": "719ffe6c670b86e5c309656cf892c441d4edfee92874245f50ff48a27be88e17",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_126.png",
+      "gitBlobOid": "08e50ccfcc9f7d3be67f715c2fe3f1e9f71dfb19"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_129.png",
+      "bytes": 12023,
+      "sha256": "48ad86b9da8bf3be9cbc13d28e8ed16a427a7e81b6f5a98fa05d7d0353d0d844",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_129.png",
+      "gitBlobOid": "8848aec6e783fa50ed59f7db50437f2c9f5120f3"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_132.png",
+      "bytes": 10964,
+      "sha256": "21648227c2d9fec02d317b7291c7c0a62261563a62c612af42451557e5827b57",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_132.png",
+      "gitBlobOid": "b43f8a81e32bb84f98f7b8009ccc8cec9d61cb49"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_135.png",
+      "bytes": 9888,
+      "sha256": "7ee13531a06082dd82078e1160a6e47b7ef40835ad8e682aea220ef64ef933bd",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_135.png",
+      "gitBlobOid": "9b08a57280066e2edd77d71ff2bb5c82a80f92c8"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_139.png",
+      "bytes": 7732,
+      "sha256": "ad1230d25edf52354bf9f1ab8657ad41c6b44d9cec6416f8cf3c5e5641a6a6e2",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_139.png",
+      "gitBlobOid": "215fa9f3f0a2da7c4fe070493e803adcb096c8ee"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_142.png",
+      "bytes": 5893,
+      "sha256": "d76c4a5e6d162713f7a4122fdacb87a34146e70a4d496bb5b80742fa777d99a9",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_142.png",
+      "gitBlobOid": "ea51f76fc8fe19a58b4f32e8948d3e3d3bf45bce"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_145.png",
+      "bytes": 3245,
+      "sha256": "b899721420ec98dc9659b555dfd276a72f553a4eb03c3d77af243c4b032c550e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_145.png",
+      "gitBlobOid": "1b75538ba5ffc38d6ba87c25e0684bd9bb8bc95c"
+    },
+    {
+      "path": "assets/medical/stack/mri-grayscale_148.png",
+      "bytes": 179,
+      "sha256": "3b2e6eac48076f216003be0d52e818fa4715a39f67284b6efda8ae35e6c80c3e",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/mri-grayscale_148.png",
+      "gitBlobOid": "b24e739a5b3f9e902324440e5e210e352a9f1e8f"
+    },
+    {
+      "path": "assets/medical/stack/sources.native.ts",
+      "bytes": 5721,
+      "sha256": "53bc8454ebb67569fd84085ff685945f92d764c740a8340b7bae37763cb8e911",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/assets/medical/stack/sources.native.ts",
+      "gitBlobOid": "f2f30211dd4a0a984356ce2171d64a02a685b6f9"
+    },
+    {
+      "path": "tests/medical-assets.test.cjs",
+      "bytes": 33509,
+      "sha256": "564329301a4a013fe662ffbb90bc2eec75dae72137fa3d9d64f5a6b8ac62795d",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tests/medical-assets.test.cjs",
+      "gitBlobOid": "78332b402044f452aa9f2f621db2e079e05a14e6"
+    },
+    {
+      "path": "tests/medical-controller.test.cjs",
+      "bytes": 22109,
+      "sha256": "7d0696ad71b6f0a57d9e3bad6b5cd09d56ad15c4639bc05fc5acbcfe1f485833",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tests/medical-controller.test.cjs",
+      "gitBlobOid": "8014996877472d3b4deb92dd02ed58e0029622e4"
+    },
+    {
+      "path": "tests/medical-slices.test.cjs",
+      "bytes": 11595,
+      "sha256": "70185780b71e1fdef84659cd2b6f1b71cae9df4d1ba64be7d655a2815b75b32f",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tests/medical-slices.test.cjs",
+      "gitBlobOid": "8536e1ba8bced1c392a514f34b1bac32c7b2c5d7"
+    },
+    {
+      "path": "tests/medical-ui.test.cjs",
+      "bytes": 30890,
+      "sha256": "a1c4451672a24823811903108bea4e6ad20bc7cf8addcd8e20845e3f2cd77044",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tests/medical-ui.test.cjs",
+      "gitBlobOid": "77b56d8c474b34bee869b7f17a90a67a3af5cf4e"
+    },
+    {
+      "path": "tests/medical-volumes.test.cjs",
+      "bytes": 20579,
+      "sha256": "d7fb3b6c7f572c5549408f64981b8080d934efee68cbe2d05699a8595fefacc1",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/tests/medical-volumes.test.cjs",
+      "gitBlobOid": "6bae8bc604b1bd625d68f7ff4df754994ba4b521"
+    },
+    {
+      "path": "package.json",
+      "bytes": 3628,
+      "sha256": "64911fd9b80dd2e2a5e7f9bd07512c91e8a5aa4662c039166bc2e15a0c72e006",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/package.json",
+      "gitBlobOid": "d8126303c409c6f7d3a925c2c493e926af2a3fb2"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 555643,
+      "sha256": "3903de745e1a4c0069fcd616094c88a3e761dca0db3c88e14a034e5bc08f0dc8",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/package-lock.json",
+      "gitBlobOid": "2c56f157b61cbbefbfb24155244d4155319b81cb"
+    },
+    {
+      "path": "project/agent/completions/medical-3d-scan.md",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-3d-scan.md",
+      "bytes": 16225,
+      "sha256": "e2ea08f4edabad31b9b4151098a4e8f3d24357fe9e5581b9818d8acb6245ca59",
+      "gitBlobOid": "8e81ab7d6053966e40957d2b47909bc39c8c5c95"
+    },
+    {
+      "path": "project/agent/completions/medical-white-cube.md",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-white-cube.md",
+      "bytes": 22919,
+      "sha256": "357a29b9f7d13db8a22d8863827ebc798f40b726efe84f11c136a89eb2e83871",
+      "gitBlobOid": "8a7071eb2489fcac2b7cde5e5916c350b1dd7588"
+    },
+    {
+      "path": "project/agent/completions/medical-scan-visibility.md",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md",
+      "bytes": 6882,
+      "sha256": "7dfd3af6df9d00a6425a62cb0073391c5d57fe7a36b344bfeadfa739857b2926",
+      "gitBlobOid": "0202d23610067ccfdbf1319f15dcede3a950b8da"
+    },
+    {
+      "path": "project/agent/completions/medical-universal-ui.md",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-universal-ui.md",
+      "bytes": 7947,
+      "sha256": "f4b2c03461627a645185744d238d0e9ef581a9b7c30903ff2a06024e75e7d490",
+      "gitBlobOid": "b5222ed1d1c76adb012f01cf2a35159b04413c8a"
+    },
+    {
+      "path": "src/features/ar/ar-transform-editor.native.tsx",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/ar/ar-transform-editor.native.tsx",
+      "bytes": 2298,
+      "sha256": "db4ddc51c635bf8ec6756ae5e03eff323c7ebcabb17301e4aae18992a9fffceb",
+      "gitBlobOid": "143407ef404720242ca829e4ce23e820176fff95"
+    },
+    {
+      "path": "src/features/ar/ar-transform.ts",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/ar/ar-transform.ts",
+      "bytes": 697,
+      "sha256": "556844ae23e6d92a1d760a35b3e759dd1b7884724eb88958af98558c29493bf2",
+      "gitBlobOid": "acdd98d40229532b954902667005225bc1f445f2"
+    },
+    {
+      "path": "src/ui/game-button.tsx",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/ui/game-button.tsx",
+      "bytes": 5149,
+      "sha256": "45db583921cef478aa8661b809061bd188931c28e95d86a0f906a23a629c36b0",
+      "gitBlobOid": "fb196ca449ac460c593d1457f81c2f1ce17627f6"
+    },
+    {
+      "path": "eas.json",
+      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/eas.json",
+      "bytes": 439,
+      "sha256": "61e23b5a64df07d5bbaa1765ef680e442483b60a1647cb7aad48c1c9d9f60dcf",
+      "gitBlobOid": "3bf046c6481396057091f8c8bd7a204475a45112"
+    }
+  ],
+  "historicalReports": [
+    "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-3d-scan.md",
+    "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-white-cube.md",
+    "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md",
+    "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-universal-ui.md"
+  ],
+  "documentation": {
+    "originalReportWords": 2979,
+    "readmeWords": 1655,
+    "originalReportRetainedLocally": true,
+    "condensationStrategy": "Each technical fact appears once in the README, immutable source, exact metadata or proof JSON; no verbatim duplicate report."
+  }
+}
