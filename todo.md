@@ -101,7 +101,8 @@ Implementation complete on the published phase-4-qubit branch; main integration 
 ## Phase 6 — Device Acceptance And Demo
 
 - [x] Validate Viro scene schemas and supported previews without claiming they prove native AR.
-- [x] Complete physical iPhone tests for all three experiences, camera denial, background/resume, rapid Home/scene switching, gestures, and teardown.
+- [ ] Complete physical iPhone tests for all three experiences, camera denial, background/resume, rapid Home/scene switching, gestures, and teardown.
+  - Owner confirmed partial testing on October 12, 2026; full device acceptance remains open.
 - [ ] Repeat native acceptance on Android after the iOS flow is stable.
 - [ ] Remove developer exposition/reference routes before the demo; verify no placeholder assets or misleading completed-feature claims remain.
 - [ ] Record the demo/screenshots and verify current hackathon submission requirements; submission is a separate user-authorized action.
