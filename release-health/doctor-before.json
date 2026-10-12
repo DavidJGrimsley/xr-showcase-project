@@ -1,0 +1,341 @@
+{
+  "projectPath": "<APP_CHECKOUT>",
+  "timestamp": "2026-10-12T19:14:56.166Z",
+  "mode": "ci",
+  "selection": {
+    "defaultMode": "fast",
+    "mode": "ci",
+    "runScripts": true,
+    "description": "CI-equivalent profile for pull requests and release gates.",
+    "includes": [
+      "static project checks",
+      "lint and typecheck scripts when scripts are enabled",
+      "tests, Expo Doctor, and release build scripts when available"
+    ],
+    "skips": [
+      "full build profile"
+    ],
+    "fullModeGuidance": "Use --full when release approval needs the broadest available build profile, including preview or development build scripts."
+  },
+  "checks": [
+    {
+      "name": "project docs",
+      "status": "pass",
+      "message": "project/info.md, project/todo.md, and project/guidelines.md are present and non-empty."
+    },
+    {
+      "name": "todo-for-context markers",
+      "status": "pass",
+      "message": "No unresolved # TodoForContext(optional): markers in project/info.md."
+    },
+    {
+      "name": "gitignore env safety",
+      "status": "pass",
+      "message": ".env is ignored by git."
+    },
+    {
+      "name": "package scripts",
+      "status": "pass",
+      "message": "Recommended package scripts are present."
+    },
+    {
+      "name": "styling stack",
+      "status": "skip",
+      "message": "No Uniwind or NativeWind dependency detected."
+    },
+    {
+      "name": "expo configuration",
+      "status": "pass",
+      "message": "Expo Router configuration looks consistent."
+    },
+    {
+      "name": "env hygiene",
+      "status": "pass",
+      "message": "No secret-looking EXPO_PUBLIC variables or hardcoded credential values found."
+    },
+    {
+      "name": "runtime security",
+      "status": "pass",
+      "message": "No server-on-client imports, private client env access, or Expo config credential leaks found."
+    },
+    {
+      "name": "app architecture",
+      "status": "pass",
+      "message": "Route files passed the first-pass architecture scan."
+    },
+    {
+      "name": "router safety",
+      "status": "pass",
+      "message": "Route groups, layouts, and navigation passed the safety scan."
+    },
+    {
+      "name": "api safety",
+      "status": "skip",
+      "message": "No Expo Router API route files found."
+    },
+    {
+      "name": "animation performance",
+      "status": "pass",
+      "message": "Animation-heavy files passed the lightweight motion scan."
+    },
+    {
+      "name": "seo metadata",
+      "status": "skip",
+      "message": "Web is not a target platform for this app."
+    },
+    {
+      "name": "lint",
+      "status": "pass",
+      "message": "npm run lint passed.",
+      "details": {
+        "code": 0,
+        "timedOut": false,
+        "stdout": "> xr-showcase@1.0.0 lint\n> eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"\nChecking formatting...\nAll matched files use Prettier code style!",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "typecheck",
+      "status": "pass",
+      "message": "npm run typecheck passed.",
+      "details": {
+        "code": 0,
+        "timedOut": false,
+        "stdout": "> xr-showcase@1.0.0 typecheck\n> tsc --noEmit",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "tests",
+      "status": "pass",
+      "message": "npm run test passed.",
+      "details": {
+        "code": 0,
+        "timedOut": false,
+        "stdout": "ℹ pass 359\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 3007.3223\n> xr-showcase@1.0.0 test:ui\n> node --experimental-strip-types --test tests/game-ui.test.cjs\n✔ ios: universal buttons expose enabled actions, selected state and disable both touch and accessibility activation (46.25ms)\n✔ android: universal buttons expose enabled actions, selected state and disable both touch and accessibility activation (10.889ms)\n✔ web: universal buttons expose enabled actions, selected state and disable both touch and accessibility activation (6.0751ms)\n✔ home actions retain all three routes and follow the measured viewport through rotation before window dimensions update (6.3964ms)\n✔ compact buttons retain 44-point touch targets and grow for large or wrapped text without shrinking default game buttons (17.1642ms)\n✔ game AR status actions stay centered in a row and preserve Retry and Home callbacks (5.4062ms)\n✔ medical permission/retry actions keep compact primary actions and outlined Home without changing game defaults (4.4581ms)\n✔ web viewport sizing matches static markup through hydration, then follows real dimensions; native sizing is immediate (6.7559ms)\n✔ Android invitation host lets the outer keyboard avoidance own keyboard insets (3.8817ms)\n✔ custom iOS game fonts scale once while fixed system sizes receive RN accessibility scaling (10.4381ms)\n✔ native game copy waits for content width, measures inside padding, and gives text and Host the same width through relayout (11.2721ms)\n✔ native invitation input never overwrites newer keystrokes with a delayed JS echo, but applies a new invite (4.4198ms)\n✔ uncertain hardware reset requires confirmation; dismissal, stale rounds and recreated AR do not reset a current job (17.8539ms)\n✔ game AR customization is opt-in and preserves the default medical status panel (16.981ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 344.1484",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "expo doctor",
+      "status": "error",
+      "message": "npm run expo-doctor failed with exit code 1.",
+      "details": {
+        "code": 1,
+        "timedOut": false,
+        "stdout": "> xr-showcase@1.0.0 expo-doctor\n> npx expo-doctor\nenv: load .env\nenv: export EXPO_PUBLIC_QUANTUM_API_BASE_URL EXPO_PUBLIC_QUANTUM_API_KEY EXPO_PUBLIC_QUANTUM_BACKEND EXPO_PUBLIC_QUANTUM_IBM_PROFILE\nRunning 21 checks on your project...\n20/21 checks passed. 1 checks failed. Possible issues detected:\nUse the --verbose flag to see more details about passed checks.\n✖ Check that packages match versions required by installed Expo SDK\n🔧 Patch version mismatches\npackage             expected  found    \n@expo/ui            ~57.0.23  57.0.22  \nexpo                ~57.0.28  57.0.27  \nexpo-dev-client     ~57.0.20  57.0.19  \nexpo-router         ~57.0.26  57.0.25  \nexpo-splash-screen  ~57.0.10  57.0.9   \nChangelogs:\n- expo-dev-client → https://github.com/expo/expo/blob/sdk-57/packages/expo-dev-client/CHANGELOG.md\n- expo-router → https://github.com/expo/expo/blob/sdk-57/packages/expo-router/CHANGELOG.md\n- expo-splash-screen → https://github.com/expo/expo/blob/sdk-57/packages/expo-splash-screen/CHANGELOG.md\n5 packages out of date.\nAdvice:\nUse 'npx expo install --check' to review and upgrade your dependencies.\nTo ignore specific packages, add them to \"expo.install.exclude\" in package.json. Learn more: https://expo.fyi/dependency-validation",
+        "stderr": "1 check failed, indicating possible issues with the project."
+      }
+    },
+    {
+      "name": "react doctor",
+      "status": "warn",
+      "message": "React Doctor found 1 errors and 27 warnings.",
+      "details": {
+        "command": "npx -y react-doctor@latest -y --no-telemetry --json --json-out <USER_HOME>\\AppData\\Local\\Temp\\mds-react-doctor-9808-1791832467263-c4241fd260089.json --blocking none",
+        "version": "0.9.17",
+        "reactDetected": true,
+        "monorepo": false,
+        "score": 93,
+        "scoreSource": "mds-local",
+        "diagnostics": {
+          "errors": 1,
+          "warnings": 27,
+          "total": 28,
+          "affectedFiles": 18,
+          "sourceFiles": 138,
+          "categories": [
+            {
+              "name": "Maintainability",
+              "count": 15
+            },
+            {
+              "name": "Bugs",
+              "count": 9
+            },
+            {
+              "name": "Performance",
+              "count": 4
+            }
+          ],
+          "topRules": [
+            {
+              "name": "react-doctor/no-high-complexity-react-function",
+              "count": 9
+            },
+            {
+              "name": "react-doctor/rn-scrollview-dynamic-padding",
+              "count": 7
+            },
+            {
+              "name": "react-doctor/only-export-components",
+              "count": 4
+            },
+            {
+              "name": "react-doctor/js-set-map-lookups",
+              "count": 2
+            },
+            {
+              "name": "react-doctor/no-giant-component",
+              "count": 2
+            },
+            {
+              "name": "react-doctor/async-await-in-loop",
+              "count": 1
+            },
+            {
+              "name": "react-doctor/async-defer-await",
+              "count": 1
+            },
+            {
+              "name": "react-doctor/effect-needs-cleanup",
+              "count": 1
+            },
+            {
+              "name": "react-doctor/no-prop-callback-in-effect",
+              "count": 1
+            }
+          ],
+          "samples": [
+            {
+              "file": "src/features/ar/ar-session-boundary.native.tsx",
+              "severity": "warning",
+              "rule": "react-doctor/no-high-complexity-react-function",
+              "message": "`ARSessionBoundary` has cyclomatic complexity 25, cognitive complexity 39, and maximum nesting depth 5, so its React logic is hard to understand and change. Extract independent branches into components or hooks.",
+              "line": 60,
+              "category": "Maintainability"
+            },
+            {
+              "file": "src/features/ar/ar-session-boundary.native.tsx",
+              "severity": "warning",
+              "rule": "react-doctor/rn-scrollview-dynamic-padding",
+              "message": "Your users see rows jump when a changing paddingBottom on contentContainerStyle shifts the whole list.",
+              "line": 175,
+              "category": "Bugs"
+            },
+            {
+              "file": "src/features/ar/ar-session-boundary.tsx",
+              "severity": "warning",
+              "rule": "react-doctor/rn-scrollview-dynamic-padding",
+              "message": "Your users see rows jump when a changing paddingBottom on contentContainerStyle shifts the whole list.",
+              "line": 23,
+              "category": "Bugs"
+            },
+            {
+              "file": "src/features/ar/ar-transform-controls.native.tsx",
+              "severity": "warning",
+              "rule": "react-doctor/no-high-complexity-react-function",
+              "message": "`ARTransformSlider` has cyclomatic complexity 15, cognitive complexity 18, and maximum nesting depth 2, so its React logic is hard to understand and change. Extract independent branches into components or hooks.",
+              "line": 15,
+              "category": "Maintainability"
+            },
+            {
+              "file": "src/features/arena-fighter/arena-experience.native.tsx",
+              "severity": "error",
+              "rule": "react-doctor/effect-needs-cleanup",
+              "message": "`setInterval` creates a timer in useEffect without guaranteed cleanup. Return a cleanup function that owns every allocation so it does not leak after unmount.",
+              "line": 35,
+              "category": "Bugs"
+            },
+            {
+              "file": "src/features/arena-fighter/arena-fighter-screen.native.tsx",
+              "severity": "warning",
+              "rule": "react-doctor/no-high-complexity-react-function",
+              "message": "`ArenaMenu` has cyclomatic complexity 51, cognitive complexity 59, and maximum nesting depth 3, so its React logic is hard to understand and change. Extract independent branches into components or hooks.",
+              "line": 143,
+              "category": "Maintainability"
+            },
+            {
+              "file": "src/features/arena-fighter/arena-fighter-screen.native.tsx",
+              "severity": "warning",
+              "rule": "react-doctor/no-giant-component",
+              "message": "Component \"ArenaMenu\" is over 300 lines long, which is hard to read & change. Split it into a few smaller components.",
+              "line": 143,
+              "category": "Maintainability"
+            },
+            {
+              "file": "src/features/arena-fighter/arena-fighter-screen.native.tsx",
+              "severity": "warning",
+              "rule": "react-doctor/no-prop-callback-in-effect",
+              "message": "Your parent re-renders on every local state change because this useEffect calls the prop \"registerBack\" just to stay in sync.",
+              "line": 282,
+              "category": "Bugs"
+            }
+          ]
+        },
+        "projects": [
+          {
+            "directory": "<APP_CHECKOUT>",
+            "framework": "expo",
+            "diagnostics": 28,
+            "sourceFiles": 138
+          }
+        ],
+        "todoRecommendation": "<!-- mds-doctor:react-doctor:start -->\n## High Priority: React Doctor Findings\n\nReact Doctor found 1 errors and 27 warnings across 18 files.\n\nTop rules to triage:\n- [ ] react-doctor/no-high-complexity-react-function: 9\n- [ ] react-doctor/rn-scrollview-dynamic-padding: 7\n- [ ] react-doctor/only-export-components: 4\n- [ ] react-doctor/js-set-map-lookups: 2\n- [ ] react-doctor/no-giant-component: 2\n- [ ] react-doctor/async-await-in-loop: 1\n- [ ] react-doctor/async-defer-await: 1\n- [ ] react-doctor/effect-needs-cleanup: 1\n\nSuggested follow-up:\n- [ ] Fix React Doctor errors first, then reduce the highest-count warning rules.\n- [ ] Re-run `mds doctor --ci` and confirm the React Doctor score improves.\n<!-- mds-doctor:react-doctor:end -->",
+        "todoUpdate": null,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "production build",
+      "status": "pass",
+      "message": "npm run build passed.",
+      "details": {
+        "code": 0,
+        "timedOut": false,
+        "stdout": "assets\\medical\\volumes\\ct_low.png (4.2MB)\nassets\\medical\\volumes\\mri_high.png (2MB)\nassets\\medical\\volumes\\mri_low.png (3.9MB)\nassets\\medical\\volumes\\mri_validity.png (20KB)\nnode_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Brands.ttf (209KB)\nnode_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Regular.ttf (68KB)\nnode_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\FontAwesome6_Solid.ttf (424KB)\nnode_modules\\@expo\\vector-icons\\build\\vendor\\react-native-vector-icons\\Fonts\\MaterialCommunityIcons.ttf (1.3MB)\nnode_modules\\@reactvision\\react-viro\\dist\\components\\Resources\\viro_blank.png (1.4KB)\nnode_modules\\@reactvision\\react-viro\\dist\\components\\Resources\\viro_spinner_1_w.png (2.9KB)\nnode_modules\\@reactvision\\react-viro\\dist\\components\\Resources\\viro_spinner_1.png (16KB)\nnode_modules\\@reactvision\\react-viro\\dist\\components\\Resources\\viro_spinner_1a_w.png (3.2KB)\nnode_modules\\@reactvision\\react-viro\\dist\\components\\Resources\\viro_spinner_1a.png (16KB)\nnode_modules\\expo-router\\assets\\arrow_down.png (9.5KB)\nnode_modules\\expo-router\\assets\\error.png (469B)\nnode_modules\\expo-router\\assets\\file.png (138B)\nnode_modules\\expo-router\\assets\\forward.png (188B)\nnode_modules\\expo-router\\assets\\pkg.png (364B)\nnode_modules\\expo-router\\assets\\react-navigation\\elements\\back-icon-mask.png (653B)\nnode_modules\\expo-router\\assets\\react-navigation\\elements\\back-icon.png (4 variations | 566B)\nnode_modules\\expo-router\\assets\\react-navigation\\elements\\clear-icon.png (4 variations | 425B)\nnode_modules\\expo-router\\assets\\react-navigation\\elements\\close-icon.png (4 variations | 235B)\nnode_modules\\expo-router\\assets\\react-navigation\\elements\\search-icon.png (3 variations | 582B)\nnode_modules\\expo-router\\assets\\sitemap.png (465B)\nnode_modules\\expo-router\\assets\\unmatched.png (4.8KB)\n› ios bundles (1):\n_expo/static/js/ios/entry-bb76c3b068725d82c584115b7911921e.hbc (12MB)\n› Files (1):\nmetadata.json (23KB)\nExported: dist",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "full build profile",
+      "status": "skip",
+      "message": "Skipped because this mode does not include preview/development build candidates; run --full when release approval needs the broadest build profile.",
+      "details": {
+        "reason": "ci mode",
+        "requiredMode": "full"
+      }
+    }
+  ],
+  "summary": {
+    "score": 83,
+    "scoreBreakdown": {
+      "components": [
+        {
+          "name": "mds",
+          "label": "MDS native checks",
+          "score": 100,
+          "desiredWeight": 50,
+          "weight": 0.5
+        },
+        {
+          "name": "react-doctor",
+          "label": "React Doctor",
+          "score": 93,
+          "desiredWeight": 35,
+          "weight": 0.35
+        },
+        {
+          "name": "expo-doctor",
+          "label": "Expo Doctor",
+          "score": 0,
+          "desiredWeight": 15,
+          "weight": 0.15
+        }
+      ]
+    },
+    "errors": 1,
+    "warnings": 1,
+    "passed": 14,
+    "skipped": 4
+  },
+  "evidenceProvenance": {
+    "recordedDate": "2026-10-12",
+    "timezone": "America/New_York",
+    "appRepository": "https://github.com/DavidJGrimsley/xr-showcase",
+    "appCommit": "0d796a7ff81a5f830516d723faa5704813d17a71",
+    "tool": "MDS doctor_scan_project",
+    "ownerSpecificPathsNormalized": true
+  }
+}

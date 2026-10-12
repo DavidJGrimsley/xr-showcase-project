@@ -6,7 +6,7 @@ Read project/info.md, project/todo.md, project/style.md and this file before cha
 ## Architecture
 Use TypeScript, npm, Expo Router and src/app. Keep route files thin and put product screens, scenes, controllers and services in src/features and src/services. Use platform file suffixes when native implementations differ. No end-user authentication, onboarding, separate backend or web release is planned.
 
-Uniwind styles React Native product screens and HUDs. Expo UI controls use their own APIs/modifiers. Use Zustand for shared app state; keep per-round/scene state local unless it needs to cross screens.
+React Native StyleSheet styles product layouts and HUDs. Expo UI controls use their own APIs/modifiers. The former Uniwind stack and developer reference pages have been removed. Use Zustand for shared app state; keep per-round/scene state local unless it needs to cross screens.
 
 ## Native AR
 iOS is the first target; Android follows. Use EAS development clients from Windows and physical iPhone AR testing. Expo Go and browser previews are not evidence that native AR works. Only one AR session may own the camera. Handle denied permissions, unsupported devices, backgrounding and route teardown. Keep the AR camera under user control.
@@ -14,7 +14,7 @@ iOS is the first target; Android follows. Use EAS development clients from Windo
 Use Viro MCP schemas and installed package types as the source for scene props. StudioSceneNavigator uses sceneId and documented native plugin configuration; do not use the research's Platform:// props. Reuse the existing Fight Arena scene; verify content/animation readiness rather than assuming the scene title proves combat works.
 
 ## Quantum API
-Use the existing production Quantum API v1 base and a supplied development X-API-Key. Device runtime configuration belongs in SecureStore; never put private keys in EXPO_PUBLIC variables, committed files, project memory, logs or screenshots. A public distribution needs a server proxy. Do not perform API-key or IBM-profile administrative operations.
+Use the existing production Quantum API v1 base and supplied development credentials. The owner-approved private hackathon client uses the first-party SDK and build-time demo credentials, as recorded in TODO's Phase 4 scope update. Values remain outside committed files, project memory, logs and screenshots. A public distribution needs a server proxy. Do not perform API-key or IBM-profile administrative operations.
 
 Follow project/references/guess-the-qubit-unreal.md for the live reference. The game guesses measurement 0/1 and has simulator plus asynchronous hardware modes, no running score. Validate terminal measurements/counts, prevent overlapping guesses, reject stale callbacks and clean up polls/requests. Reset/Home must attempt cancellation of a known unfinished job. Network failures stay recoverable inside the app.
 
@@ -24,7 +24,7 @@ Use licensed fighter/skull assets and record their provenance. Medical anatomy l
 Run MDS Doctor through its MCP tool, plus the appropriate type/dependency/bundle checks after changes. Add meaningful tests for the Quantum client/round controller when those features are implemented. Preserve existing TODO items; track new defects in the Bug Fixes & Regressions queue.
 
 ## Development references and release
-Generated settings, Stylist, exposition and data examples are temporary development references. Replace Home in Phase 1 and remove examples before the demo. Follow project/release-flow.md for test-to-main safeguards when a remote repository is configured. No repository publication, cloud build, public deployment or hackathon submission is implied by creating this scaffold.
+Settings, Stylist and exposition routes have been removed. Release-health fixes remove the remaining mock task data and unused adapters; live theme tokens remain. Use dedicated branches and PRs for the configured source and project repositories. Cloud builds, public deployment and hackathon submission remain separate user-authorized actions.
 
 <!-- MDS_CONTROL_PLANE_CONTRACT -->
 

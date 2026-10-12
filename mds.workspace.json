@@ -5,7 +5,7 @@
   "repositories": [
     {
       "id": "source",
-      "remote": "REQUIRED",
+      "remote": "https://github.com/DavidJGrimsley/xr-showcase.git",
       "defaultBranch": "main",
       "mainFolder": "xr-showcase-main",
       "worktreePrefix": "xr-showcase-"

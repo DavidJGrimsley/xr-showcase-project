@@ -1,0 +1,18 @@
+{
+  "kind": "developer-copy",
+  "projectPath": "<APP_CHECKOUT>",
+  "timestamp": "2026-10-12T19:34:44.903Z",
+  "summary": {
+    "findings": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "findings": [],
+  "evidenceProvenance": {
+    "recordedDate": "2026-10-12",
+    "timezone": "America/New_York",
+    "appRepository": "https://github.com/DavidJGrimsley/xr-showcase",
+    "appCommit": "916804317835e5d1b5ccf98f527f955600f4489b",
+    "ownerSpecificPathsNormalized": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "developer-copy",
+  "projectPath": "<APP_CHECKOUT>",
+  "timestamp": "2026-10-12T19:13:36.146Z",
+  "summary": {
+    "findings": 6,
+    "errors": 6,
+    "warnings": 0
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "code": "mock-data",
+      "file": "src/features/home/home-screen.tsx",
+      "line": 5,
+      "excerpt": "import { appSnapshot } from '@/data/mock-app';",
+      "message": "Example or mock data is still referenced from a user-facing surface."
+    },
+    {
+      "severity": "error",
+      "code": "mock-data",
+      "file": "src/data/mock-app.ts",
+      "line": 1,
+      "excerpt": "mock-app.ts",
+      "message": "Generated mock snapshot data is still in the project and should be replaced before shipping."
+    },
+    {
+      "severity": "error",
+      "code": "mock-data",
+      "file": "src/services/local-data.native.ts",
+      "line": 3,
+      "excerpt": "import { appSnapshot } from '../data/mock-app';",
+      "message": "Example or mock data is still referenced from a user-facing surface."
+    },
+    {
+      "severity": "error",
+      "code": "mock-data",
+      "file": "src/services/local-data.native.ts",
+      "line": 5,
+      "excerpt": "import type { AppTask } from '../data/mock-app';",
+      "message": "Example or mock data is still referenced from a user-facing surface."
+    },
+    {
+      "severity": "error",
+      "code": "mock-data",
+      "file": "src/services/local-data.ts",
+      "line": 1,
+      "excerpt": "import { appSnapshot } from '../data/mock-app';",
+      "message": "Example or mock data is still referenced from a user-facing surface."
+    },
+    {
+      "severity": "error",
+      "code": "mock-data",
+      "file": "src/services/local-data.ts",
+      "line": 3,
+      "excerpt": "import type { AppTask } from '../data/mock-app';",
+      "message": "Example or mock data is still referenced from a user-facing surface."
+    }
+  ],
+  "evidenceProvenance": {
+    "recordedDate": "2026-10-12",
+    "timezone": "America/New_York",
+    "appRepository": "https://github.com/DavidJGrimsley/xr-showcase",
+    "appCommit": "0d796a7ff81a5f830516d723faa5704813d17a71",
+    "ownerSpecificPathsNormalized": true
+  }
+}
