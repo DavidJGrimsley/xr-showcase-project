@@ -61,7 +61,8 @@ Product tasks take precedence over retained starter checklist items. SQLite/data
 
 - [x] Add a Scan Slices option to Medical Viewer for actual CT and registered MRI axial images in AR, with a 3D Slicer exporter, generated static asset mappings, modality selection and slice navigation; preserve the separate 3D Anatomy mode.
 
-- [x] Add the user-supplied MRI-derived brain 3D model to Medical Viewer and a third dropdown option, Both, that displays the user-supplied half-skull and brain models together; the user will supply both models when implementation starts.
+- [x] Add the user-supplied MRI-derived brain 3D model to Medical Viewer and a third dropdown option, Both, that displays the user-supplied half-skull and brain models together; both aligned GLBs are packaged with dataset provenance.
+  - Completion: [integrated assets and Both mode](https://github.com/DavidJGrimsley/xr-showcase/commit/559be692209fdc736ad127cb6933db1c6723c4ee), verified reachable from app `main`; [brain provenance](https://github.com/DavidJGrimsley/xr-showcase/blob/559be692209fdc736ad127cb6933db1c6723c4ee/assets/medical/brain-provenance.json) and [half-skull provenance](https://github.com/DavidJGrimsley/xr-showcase/blob/559be692209fdc736ad127cb6933db1c6723c4ee/assets/medical/half-skull-provenance.json).
 
 - [x] Implement Medical Viewer with the packaged CT-derived skull, plane placement and calibrated anatomy labels.
 - [x] Add bounded pinch/rotate gestures and reset placement; validate readability, loading errors and asset provenance on iPhone.
