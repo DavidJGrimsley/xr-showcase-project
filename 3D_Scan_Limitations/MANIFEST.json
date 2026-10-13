@@ -12,8 +12,9 @@
   },
   "packageRepository": {
     "repository": "https://github.com/DavidJGrimsley/xr-showcase-project",
-    "branch": "docs/3d-scan-limitations",
-    "manifestSelfHashExcluded": true
+    "branch": "docs/project-release-checks",
+    "manifestSelfHashExcluded": true,
+    "initialBranch": "docs/3d-scan-limitations"
   },
   "environment": {
     "node": "v24.16.0",
@@ -79,7 +80,6 @@
     "directlyVerifiedNativeVersion": null,
     "sustainedFps": null,
     "repeatedSwitchMemory": null,
-    "latestSheetPhysicalAcceptance": null,
     "remainingWhiteCubeRootCause": null
   },
   "data": {
@@ -428,18 +428,6 @@
       ]
     },
     {
-      "topic": "Raw-text Done exception and initial sheet layout repair; subsequent committed UI state",
-      "destination": "README.md#trials-corrections-and-remaining-uncertainty",
-      "sourceFiles": [
-        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md",
-        "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-universal-ui.md"
-      ],
-      "evidence": [
-        "evidence/device/codex-clipboard-c08c5117-ca70-4cb6-89b6-a3c01acddd63.png",
-        "evidence/device/IMG_3687.png"
-      ]
-    },
-    {
       "topic": "Historical source/export/189/195/73/GPU/Doctor/bundle/whitespace checks versus fresh 86 tests",
       "destination": "README.md#results-and-reproduction",
       "sourceFiles": [
@@ -516,7 +504,7 @@
       "evidence": []
     },
     {
-      "topic": "Unverified physical drawing/UI/FPS/memory; 30 FPS/60-second and 1/10/30 switches targets",
+      "topic": "Unverified physical drawing/FPS/memory; 30 FPS/60-second and 1/10/30 switches targets",
       "destination": "README.md#results-and-reproduction",
       "sourceFiles": [],
       "evidence": []
@@ -764,19 +752,6 @@
       }
     },
     {
-      "path": "evidence/device/codex-clipboard-c08c5117-ca70-4cb6-89b6-a3c01acddd63.png",
-      "bytes": 154031,
-      "sha256": "10cc821bb24879ec98fd082e9b35635ee078609a4f056f9bff0728f87bed46f5",
-      "provenance": {
-        "category": "historical-owner-device",
-        "caption": "Scan Controls raw-text exception at the Done button",
-        "recordedDate": "2026-10-11",
-        "captureTimeKnown": false,
-        "originalSha256": "10cc821bb24879ec98fd082e9b35635ee078609a4f056f9bff0728f87bed46f5",
-        "bytePreservingCopy": true
-      }
-    },
-    {
       "path": "evidence/device/IMG_3669.png",
       "bytes": 2054084,
       "sha256": "7d95a7a924daf0435054e69737a56390161b2b33a91f9b0de7fe794d55260240",
@@ -864,19 +839,6 @@
         "recordedDate": "2026-10-11",
         "captureTimeKnown": false,
         "originalSha256": "2f6300281f7d32c08699f95fef1746ed7c79be7ad8d1170065a7ac02061b403f",
-        "bytePreservingCopy": true
-      }
-    },
-    {
-      "path": "evidence/device/IMG_3687.png",
-      "bytes": 119293,
-      "sha256": "6f66622a7accfd8d5fd34861be309f76040af84287d28c2125b73abf6d1d9520",
-      "provenance": {
-        "category": "historical-owner-device",
-        "caption": "After visibility improvement: Scan Controls layout failure",
-        "recordedDate": "2026-10-11",
-        "captureTimeKnown": false,
-        "originalSha256": "6f66622a7accfd8d5fd34861be309f76040af84287d28c2125b73abf6d1d9520",
         "bytePreservingCopy": true
       }
     },
@@ -1349,8 +1311,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14642,
-      "sha256": "77b9779f221a2c01429df210c725633b348f10838aa6ffcc17d3c4212d1d5f33",
+      "bytes": 14233,
+      "sha256": "18442638d2f9ed9669d850e39c02635bd094c52150a5341084191da63bec3615",
       "provenance": {
         "category": "authored-handoff",
         "recordedDate": "2026-10-12"
@@ -2844,13 +2806,6 @@
       "gitBlobOid": "0202d23610067ccfdbf1319f15dcede3a950b8da"
     },
     {
-      "path": "project/agent/completions/medical-universal-ui.md",
-      "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-universal-ui.md",
-      "bytes": 7947,
-      "sha256": "f4b2c03461627a645185744d238d0e9ef581a9b7c30903ff2a06024e75e7d490",
-      "gitBlobOid": "b5222ed1d1c76adb012f01cf2a35159b04413c8a"
-    },
-    {
       "path": "src/features/ar/ar-transform-editor.native.tsx",
       "url": "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/src/features/ar/ar-transform-editor.native.tsx",
       "bytes": 2298,
@@ -2882,13 +2837,13 @@
   "historicalReports": [
     "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-3d-scan.md",
     "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-white-cube.md",
-    "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md",
-    "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-universal-ui.md"
+    "https://github.com/DavidJGrimsley/xr-showcase/blob/e1a0042aba53959018f7cba78e85d9dc41affc63/project/agent/completions/medical-scan-visibility.md"
   ],
   "documentation": {
     "originalReportWords": 2979,
-    "readmeWords": 1655,
+    "readmeWords": 1618,
     "originalReportRetainedLocally": true,
-    "condensationStrategy": "Each technical fact appears once in the README, immutable source, exact metadata or proof JSON; no verbatim duplicate report."
+    "condensationStrategy": "Each volume-rendering technical fact appears once in the README, immutable source, exact metadata or proof JSON; no verbatim duplicate report.",
+    "revisionNote": "Scope covers 3D volume rendering, data, native diagnostics and the scan-layer fallback."
   }
 }
